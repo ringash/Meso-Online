@@ -8,13 +8,13 @@
         </a>
     </div>
     <div id="header-list">
-        <a href="courses.html">KURSET</a>
-        <a href="about-us.html">RRETH NESH</a>
-        <a href="contact.html">KONTAKTI</a>
+        <a href="courses.php">KURSET</a>
+        <a href="about-us.php">RRETH NESH</a>
+        <a href="contact.php">KONTAKTI</a>
     </div>
     <div id="login-register">
-        <a href="login.html">KY&#199U</a>
-        <a href="register.html">REGJISTROHU</a>
+        <a href="login.php">KY&#199U</a>
+        <a href="register.php">REGJISTROHU</a>
     </div>
 </body>
 

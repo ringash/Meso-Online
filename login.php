@@ -34,7 +34,7 @@
             <button id="submit" type="button" onclick="validate(0)">Ky&#231u</button>
         </div>
         <div id="click-here">
-            <a href="register.html">Nuk ke account?</a>
+            <a href="register.php">Nuk ke account?</a>
         </div>
     </div>
     <script src="js/login-register-contact.js"></script>

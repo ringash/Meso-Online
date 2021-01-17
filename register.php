@@ -42,7 +42,7 @@
             <button id="submit" type="button" onclick="validate(1)">Regjistrohu</button>
         </div>
         <div id="click-here">
-            <a href="login.html ">Ke account?</a>
+            <a href="login.php ">Ke account?</a>
         </div>
     </div>
     <script src="js/login-register-contact.js"></script>

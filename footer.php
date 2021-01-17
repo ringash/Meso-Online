@@ -14,9 +14,9 @@
         </div>
         <div id="links">
             <ul>
-                <li><a href="courses.html">KURSET</a></li>
-                <li><a href="about-us.html">RRETH NESH</a></li>
-                <li><a href="contact.html">KONTAKTI</a></li>
+                <li><a href="courses.php">KURSET</a></li>
+                <li><a href="about-us.php">RRETH NESH</a></li>
+                <li><a href="contact.php">KONTAKTI</a></li>
             </ul>
         </div>
         <div id="social-medias">

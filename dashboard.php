@@ -20,7 +20,7 @@
     </div>
     <div id="welcome">
         <p>M&#235so kodim pa pages&#235!</p>
-        <a href="courses.html">Grahi pun&#235s!</a>
+        <a href="courses.php">Grahi pun&#235s!</a>
     </div>
 
     <div id="reviews-content">
