@@ -7,7 +7,6 @@
     <title>Ballina - M&#235so Online</title>
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
-    <link rel="stylesheet" href="css/main-style.css" />
     <link rel="stylesheet" href="css/dashboard-style.css" />
 </head>
 

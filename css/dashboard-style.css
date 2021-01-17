@@ -107,3 +107,29 @@
     color: rgb(119, 119, 119);
     font-family: 'Fredoka One';
 }
+
+@media only screen and (max-width: 400px){
+    #welcome {
+        padding: 45px;
+        position: absolute;
+        width: 150px;
+        height: 80px;
+        left: 25px;
+        opacity: 0.8;
+    }
+    #welcome :first-child{
+        opacity: 1;
+        font-size: 20px;
+    }
+
+    #welcome a{
+        opacity: 1;
+        font-size: 15px;
+        padding: 10px;
+    }
+    #reviews {
+        width: 100vw;
+        height: 65%;
+        flex-direction: column;
+    }
+}

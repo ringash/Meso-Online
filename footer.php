@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
+    <link rel="stylesheet" href="css/main-style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
 <body>
     <div id="download">
         <p>B&#235ni download app-in ton&#235 p&#235r nj&#235 eksperienc&#235 m&#235 t&#235 mir&#235</p>
