@@ -73,3 +73,19 @@ body {
     font-size: 15px;
     color: rgb(149, 149, 149);
 }
+
+@media only screen and (max-width: 400px) {
+    .course-box {
+        width: 100px;
+        height: 150px;
+        /* margin: 15px;ss
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 2px solid #dce2e5;
+        box-shadow: 0 4px 0 rgba(107, 127, 153, 0.5); */
+    }
+}
