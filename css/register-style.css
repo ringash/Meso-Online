@@ -96,3 +96,13 @@ button:hover {
     text-decoration: none;
     font-family: 'Convergence';
 }
+
+@media only screen and (max-width: 400px) {
+    body{
+        height: 100vh;
+    }
+    #register-form {
+        margin: 100px auto;
+        width: 90%;
+    }
+}
