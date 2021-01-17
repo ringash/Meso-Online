@@ -11,8 +11,10 @@
 <body>
     <div id="download">
         <p>B&#235ni download app-in ton&#235 p&#235r nj&#235 eksperienc&#235 m&#235 t&#235 mir&#235</p>
-        <a href="https://www.apple.com/app-store/"><img alt="ios-download" src="images/main/downloads/ios-icon.jpg" /></a>
-        <a href="https://play.google.com/store/apps"><img alt="android-download" src="images/main/downloads/android-icon.png" /></a>
+        <div id="appplay">
+            <a href="https://www.apple.com/app-store/"><img alt="ios-download" src="images/main/downloads/ios-icon.jpg" /></a>
+            <a href="https://play.google.com/store/apps"><img alt="android-download" src="images/main/downloads/android-icon.png" /></a>
+        </div>
     </div>
     <div id="info">
         <div id="location">
