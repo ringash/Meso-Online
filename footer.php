@@ -25,7 +25,6 @@
             <a href="https://www.reddit.com/r/ProgrammerHumor/"><img alt="reddit" src="images/main/social media/reddit-icon.png" /></a>
         </div>
     </div>
-    </footer>
 </body>
 
 </html>
