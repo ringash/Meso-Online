@@ -11,7 +11,7 @@
     padding: 45px;
     position: absolute;
     width: 600px;
-    height: 250px;
+    height: fit-content;
     top: 35%;
     left: 50%;
     display: flex;
@@ -109,27 +109,39 @@
 }
 
 @media only screen and (max-width: 400px){
+    #bck-img {
+        height: 300px;
+    }
     #welcome {
-        padding: 45px;
-        position: absolute;
-        width: 150px;
+        width: 125px;
         height: 80px;
-        left: 25px;
-        opacity: 0.8;
+        left: 140px;
+        top: 190px;
     }
     #welcome :first-child{
-        opacity: 1;
         font-size: 20px;
+        opacity: 2;
     }
-
     #welcome a{
-        opacity: 1;
         font-size: 15px;
         padding: 10px;
     }
-    #reviews {
-        width: 100vw;
-        height: 65%;
+    #reviews-content {
+        height: fit-content;
+    }
+    #rev-title {
+        font-size: 30px;
+    }
+    #reviews{
+        flex-direction: column;
+        align-items: center;
+    }
+    #reviews>div {
+        margin: 10px;
+        border: 1px solid rgb(185, 250, 236);
+        border-radius: 25px;
+        background-color:  rgb(245, 252, 250);
+        width: 90%;
         flex-direction: column;
     }
 }

@@ -27,7 +27,7 @@
             <p>&#199far&#235 thon&#235 t&#235 tjer&#235t p&#235r ne?</p>
         </div>
         <div id="reviews">
-            <div>
+            <div class="review">
                 <div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem numquam tempore doloribus dolorum accusamus placeat, maxime voluptatem officia rerum eum saepe sint dignissimos sed sunt voluptatibus cupiditate hic ut mollitia.</p>
                 </div>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="review">
                 <div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem numquam tempore doloribus dolorum accusamus placeat, maxime voluptatem officia rerum eum saepe sint dignissimos sed sunt voluptatibus cupiditate hic ut mollitia.</p>
                 </div>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="review">
                 <div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem numquam tempore doloribus dolorum accusamus placeat, maxime voluptatem officia rerum eum saepe sint dignissimos sed sunt voluptatibus cupiditate hic ut mollitia.</p>
                 </div>
