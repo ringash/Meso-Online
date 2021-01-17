@@ -3,7 +3,7 @@
 
 <body>
     <div id="header-logo">
-        <a href="dashboard.html" alt="dashboard">
+        <a href="dashboard.php" alt="dashboard">
             <img alt="logo" src="images/main/laptop-logo.png" />
         </a>
     </div>
