@@ -192,6 +192,9 @@ footer {
         height: 40%;
         width: 40%;
     }
+    #social-medias img {
+        height: 30px;
+    }
     footer {
         width: 375px;
     }
