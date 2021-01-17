@@ -31,7 +31,7 @@
 
         <div id="team">
             <h2 id='title-stafi'>Stafi:</h2>
-            <div id='test'>
+            <div>
                 <ul>
                     <li class="person">
                         <img src="images/dashboard/no-profile.png" alt="">
