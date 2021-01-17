@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(234, 255, 250);
+}
+
+#login-form {
+    margin: 200px auto;
+    height: fit-content;
+    width: 500px;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px rgb(148, 148, 148);
+    padding: 0 0 40px;
+}
+
+#user-img {
+    position: relative;
+    bottom: 50px;
+}
+
+#login-form img {
+    height: 60px;
+    width: 70px;
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0px -10px 20px -10px rgb(148, 148, 148);
+}
+
+.u-p {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Convergence';
+    font-weight: bold;
+    color: rgb(97, 97, 97);
+    padding-bottom: 20px;
+}
+
+.u-p p {
+    padding-bottom: 5px;
+}
+
+.input1 {
+    width: 100%;
+    height: 25px;
+    background: #e6e6e6;
+    font-size: 15px;
+    color: #666666;
+    border-radius: 25px;
+    border: none;
+}
+
+input.input1 {
+    padding: 0 10px;
+}
+
+.input1:focus {
+    outline: none;
+}
+
+button {
+    width: fit-content;
+    height: 40px;
+    padding: 10px;
+    border-radius: 25px;
+    background: rgb(27, 188, 154);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-family: 'Convergence';
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+
+button:focus {
+    outline-style: none;
+}
+
+button:hover {
+    color: rgb(53, 65, 203);
+    border: 2px solid rgb(53, 65, 203);
+}
+
+#click-here {
+    padding-top: 30px;
+    font-size: 13px;
+}
+
+#click-here a {
+    text-decoration: none;
+    font-family: 'Convergence';
+}

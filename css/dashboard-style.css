@@ -1,0 +1,109 @@
+#bck-img {
+    background-image: url('../images/dashboard/dashboard-img.png');
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100vh;
+    background-size: 100%;
+}
+
+#welcome {
+    font-family: 'Fredoka One';
+    padding: 45px;
+    position: absolute;
+    width: 600px;
+    height: 250px;
+    top: 35%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(27, 188, 154);
+    border-radius: 20px;
+}
+
+#welcome :first-child {
+    display: flex;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+#welcome a {
+    font-size: 35px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+#welcome a:hover {
+    background-color: rgb(27, 188, 154);
+    color: white;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+#reviews-content {
+    margin: auto;
+    height: 100%;
+    padding-bottom: 10%;
+}
+
+#reviews-content.div {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#rev-title {
+    margin: auto;
+    font-family: 'Fredoka One';
+    color: rgb(27, 188, 154);
+    text-align: center;
+    font-size: 69px;
+    padding: 5%;
+}
+
+#reviews {
+    margin: auto;
+    width: 70vw;
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+}
+
+#reviews img {
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgb(27, 188, 154);
+}
+
+.review-img {
+    width: fit-content;
+}
+
+#reviews>div {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#reviews>div>div {
+    padding: 25px;
+}
+
+#person {
+    display: flex;
+}
+
+#name {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: rgb(119, 119, 119);
+    font-family: 'Fredoka One';
+}
