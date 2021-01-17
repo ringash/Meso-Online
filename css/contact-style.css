@@ -105,3 +105,27 @@ textarea.input1:focus {
     border: 2px solid rgb(39, 48, 148);
     color: rgb(39, 48, 148);
 }
+
+@media only screen and (max-width: 400px) {
+    #contact {
+        height: 700px;
+    }
+    #contact-pic {
+        display: none;
+    }
+    #contact-form {
+        margin-left: 0%;
+        padding: 0;
+        width: 375px;
+    }
+    input.input1 {
+        width: auto;
+    }
+    #form-message {
+        width: 180px;
+        height: 200px;
+    }
+    .write {
+        width: auto;
+    }
+}
