@@ -50,5 +50,5 @@ function validate(number) {
         } else {
             alert('Do te degjohemi se shpejti!');
         }
-    }
+    } 
 }
