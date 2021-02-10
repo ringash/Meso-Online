@@ -18,7 +18,20 @@
     </header>
 
     <div id="about-us">
-        <div id='img1'><img src="images/about-us/staff-photo.png" alt=""></div>
+        <div class="slider">
+            <div class="slider-content active">
+                <img src="images/about-us/staff-photo.png" alt="">
+                <h1>Stafi yne</h1>
+            </div>
+            <div class="slider-content not-active">
+                <img src="images/about-us/about-us-slider2.jpg" alt="" />
+                <h1>Hapesira jone e punes</h1>
+            </div>
+            <div class="slider-content not-active">
+                <img src="images/about-us/about-us-slider3.jpg" alt="" />
+                <h1>Meso Online HQ</h1>
+            </div>
+        </div>
         <div id="about-intro">
             <p class="p1"> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae laborum vel quibusdam hic ipsa explicabo quos a ducimus similique perferendis cumque quidem, dolorem rerum, nam eaque eum nobis pariatur autem."</p>
             <h6>Emri Mbiemri/CEO</h6>
@@ -72,7 +85,7 @@
             </div>
         </div>
     </div>
-
+    <script src="js/slider.js"></script>
     <footer>
         <?php include 'footer.php'; ?>
     </footer>

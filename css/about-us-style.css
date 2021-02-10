@@ -1,120 +1,134 @@
 body {
-  font-family: Convergence;
-  background-color: rgb(228, 235, 237);
+    font-family: Convergence;
+    background-color: rgb(228, 235, 237);
 }
 
 h3 {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 h2 {
-  text-align: center;
-  padding-bottom: 30px;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 #about-us {
-  margin: auto;
-  padding: 100px;
-  width: fit-content;
-  line-height: 1.6em;
+    margin: auto;
+    padding: 100px;
+    width: fit-content;
+    line-height: 1.6em;
 }
 
-#img1 {
-  width: 100%;
+.slider-content img {
+    height: 300px;
+    width: 700px;
+    padding-left: 35%;
 }
 
-#img1 img {
-  width: 800px;
-  padding-left: 20%;
+.slider-content h1 {
+    font-size: small;
+    padding-left: 35%;
 }
 
 #about-intro {
-  padding: 100px;
-  margin-bottom: 50px;
+    padding: 100px;
+    margin-bottom: 50px;
+    margin-top: 300px;
 }
 
 .p1 {
-  font-size: 22px;
-  font-style: italic;
+    font-size: 22px;
+    font-style: italic;
 }
 
 #team ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #team ul li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .team_name {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .team_title {
-  font-style: italic;
+    font-style: italic;
 }
 
 #team img {
-  height: 60px;
-  border-radius: 50%;
-  border: 1px solid rgb(27, 188, 154);
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgb(27, 188, 154);
 }
 
 .person {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3%;
+}
+
+.active {
+    position: absolute;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.not-active {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
 }
 
 @media only screen and (max-width: 400px) {
-  #about-us {
-    width: 100%;
-    padding: 0px;
-  }
-  #img1 img {
-    margin: auto;
-    width: 300px;
-    padding-left: 0%;
-    padding: 37px;
-  }
-
-  #about-intro {
-    padding: 37px;
-    margin-bottom: 70px;
-  }
-  .p1 {
-    font-size: 17px;
-  }
-  h6 {
-    padding-bottom: 70px;
-  }
-  h3 {
-    padding-bottom: 20px;
-  }
-  #team ul {
-    flex-wrap: wrap;
-  }
-  #team {
-    padding-bottom: 50px;
-  }
-  #title-stafi {
-    font-size: 20px;
-  }
-  .team_name {
-    font-size: 15px;
-  }
-  .team_title {
-    font-size: 15px;
-  }
-  .person {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 25px;
-    background-color: rgb(220, 227, 230);
-    padding-bottom: 15px;
-  }
+    #about-us {
+        width: 100%;
+        padding: 0px;
+    }
+    #img1 img {
+        margin: auto;
+        width: 300px;
+        padding-left: 0%;
+        padding: 37px;
+    }
+    #about-intro {
+        padding: 37px;
+        margin-bottom: 70px;
+    }
+    .p1 {
+        font-size: 17px;
+    }
+    h6 {
+        padding-bottom: 70px;
+    }
+    h3 {
+        padding-bottom: 20px;
+    }
+    #team ul {
+        flex-wrap: wrap;
+    }
+    #team {
+        padding-bottom: 50px;
+    }
+    #title-stafi {
+        font-size: 20px;
+    }
+    .team_name {
+        font-size: 15px;
+    }
+    .team_title {
+        font-size: 15px;
+    }
+    .person {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 25px;
+        background-color: rgb(220, 227, 230);
+        padding-bottom: 15px;
+    }
 }
