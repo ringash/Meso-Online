@@ -61,3 +61,26 @@ class Login
         } else return false;
     }
 }
+
+class Register
+{
+    private $username = "";
+    private $email = "";
+    private $password = "";
+    
+
+    public function __construct($formData)
+    {
+        $this->username = $formData['register-username'];
+        $this->password = $formData['register-password'];
+        $this->email= $formData['email'];
+    }
+
+    public function insertData()
+    {
+        $user = new SimpleUser($this->username, $this->password,$this->email , 0);
+        $mapper = new UserData();
+        $mapper->insertUser($user);
+        header("Location:../dashboard.php");
+    }
+}

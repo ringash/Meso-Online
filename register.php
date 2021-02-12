@@ -25,7 +25,7 @@
         </div>
         <div id="emri" class="inputs">
             <p>Username</p>
-            <input class="input1" type="text" name="username">
+            <input class="input1" type="text" name="register-username">
         </div>
         <div id="email" class="inputs">
             <p>Email</p>
@@ -33,14 +33,14 @@
         </div>
         <div id="password" class="inputs">
             <p>Password</p>
-            <input class="input1" type="password" name="password">
+            <input class="input1" type="password" name="register-password">
         </div>
         <div id="confirm-password" class="inputs">
             <p>Confirm Password</p>
-            <input class="input1" type="password" name="password">
+            <input class="input1" type="password" name="confpassword">
         </div>
         <div>
-            <button id="submit" type="button" onclick="validate(1)">Regjistrohu</button>
+            <button id="submit" type="button"  name="register-btn" onclick="validate(1)">Regjistrohu</button>
         </div>
         <div id="cond-link">
             <a href="#" onclick="show(1)">Lexo kushtet e regjistrimit</a>
