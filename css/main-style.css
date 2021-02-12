@@ -199,3 +199,13 @@ footer {
         width: 375px;
     }
 }
+
+@media only screen and (max-width: 800px) {
+    #download p {
+        font-size: 15px;
+        padding-right: 10px;
+    }
+    #social-medias {
+        height: 20%;
+    }
+}
