@@ -3,10 +3,9 @@ include_once 'User.php';
 
 class SimpleUser extends User
 {
-    public function __construct($username,  $password, $role)
+    public function __construct($username, $email, $password, $role)
     {
-        parent::__construct($username, $password, $role);
-        
+        parent::__construct($username, $email, $password, $role);
     }
 
     public function setSession()
@@ -20,11 +19,15 @@ class SimpleUser extends User
     {
         return $this->username;
     }
+    public function getEmail()
+    {
+        return $this->email;
+    }
     public function getPassword()
     {
         return $this->password;
     }
-  
+
     public function getRole()
     {
         return $this->role;
