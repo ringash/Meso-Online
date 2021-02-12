@@ -31,7 +31,7 @@
             <input class="input1" type="password" name="password">
         </div>
         <div>
-            <button id="submit" type="button" onclick="validate(0)">Ky&#231u</button>
+            <button id="submit" type="button" name="login-btn" onclick="validate(0)">Ky&#231u</button>
         </div>
         <div id="click-here">
             <a href="register.php">Nuk ke account?</a>
