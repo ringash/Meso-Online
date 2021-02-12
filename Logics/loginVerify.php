@@ -72,13 +72,14 @@ class Register
     public function __construct($formData)
     {
         $this->username = $formData['register-username'];
-        $this->password = $formData['register-password'];
         $this->email= $formData['email'];
+        $this->password = $formData['register-password'];
+       
     }
 
-    public function insertData()
+    public function insertUser()
     {
-        $user = new SimpleUser($this->username, $this->password,$this->email , 0);
+        $user = new SimpleUser($this->username,$this->email , $this->password, 0);
         $mapper = new UserData();
         $mapper->insertUser($user);
         header("Location:../dashboard.php");

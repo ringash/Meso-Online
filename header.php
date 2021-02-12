@@ -18,6 +18,7 @@
         <a href="courses.php">KURSET</a>
         <a href="about-us.php">RRETH NESH</a>
         <a href="contact.php">KONTAKTI</a>
+        <a href="settings.php">settings</a>
     </div>
     <div id="login-register">
         <a href="login.php">KY&#199U</a>
