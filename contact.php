@@ -34,7 +34,7 @@
             <div class="write">
                 <textarea id="form-message" class="input1" name="message" placeholder="Mesazhi"></textarea>
             </div>
-            <button id="submit" type="button" onclick="validate(2)">D&#235rgo Email</button>
+            <button id="submit" type="button" name="contact-submit" onclick="validate(2)">D&#235rgo Email</button>
         </div>
 
     </form>

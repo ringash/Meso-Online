@@ -1,4 +1,11 @@
 <?php
+require_once 'userData.php';
+session_start();
+if (isset($_POST['contact-submit'])) {
+    $contact = new Contact($_POST);
+    $contact->insertContact();
+    echo 'sukses!!!';
+}
 class Contact
 {
     private $contactname = "";
@@ -41,4 +48,4 @@ class Contact
        echo 'ka mbrri deri te insert';
     }
 }
-?>f
+?>

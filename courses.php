@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="css/main-style.css" />
     <link rel="stylesheet" href="css/courses-style.css" />
 </head>
-
+<?php
+include_once 'Logics/userData.php';
+ $mapper2 =  new userData();
+ $courseList = $mapper2->getAllCourses();
+ ?>
 <body>
     <header>
         <?php include 'header.php'; ?>
@@ -20,14 +24,19 @@
         <div id="title">
             <p>&#199far&#235 do t&#235 m&#235sosh?</p>
         </div>
+        <?php
+                foreach ($courseList as $course) {
+                ?>
         <div id="types-of-courses">
             <a href="#">
-                <div class="course-box">
-                    <img alt="java" src="images/courses/java.jpg" />
-                    <p>Java</p>
-                    <p>4M Studenta</p>
+                <div class="course-box">    
+               <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $course['courseimg'] ).'"/>'; ?>
+                    <p> <?php echo $course['coursename']; ?></p>
+                    <p><?php echo $course['couseinfo']; ?></p>
                 </div>
-            </a>
+            </a><?php
+                }
+                ?>
             <a href="#">
                 <div class="course-box">
                     <img alt="c#" src="images/courses/csharp.jpg" />
@@ -42,6 +51,7 @@
                     <p>2M Studenta</p>
                 </div>
             </a>
+            
             <a href="#">
                 <div class="course-box">
                     <img alt="java" src="images/courses/blank.png" />
