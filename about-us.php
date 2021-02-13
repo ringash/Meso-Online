@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="css/dashboard-style.css" />
     <link rel="stylesheet" href="css/about-us-style.css" />
 </head>
-
+<?php
+include_once 'Logics/userData.php';
+ $mapper3 =  new userData();
+ $staffList = $mapper3->getAllStaff();
+ ?>
 <body>
     <header>
         <?php include 'header.php'; ?>
@@ -46,41 +50,17 @@
             <h2 id='title-stafi'>Stafi:</h2>
             <div>
                 <ul>
+                <?php
+                foreach ($staffList as $staff) {
+                ?>
                     <li class="person">
-                        <img src="images/dashboard/no-profile.png" alt="">
-                        <p class="team_name">Emri Mbiemri</p>
-                        <p class="team_title">Pozita e pun&#235s</p>
+                    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $staff['staff-photo'] ).'"/>'; ?>
+                        <p class="team_name"><?php echo $staff['fullname']; ?></p>
+                        <p class="team_title"><?php echo $staff['pozita']; ?></p>
                     </li>
-                    <li class="person">
-                        <img src="images/dashboard/no-profile.png" alt="">
-
-                        <p class="team_name">Emri Mbiemri</p>
-                        <p class="team_title">Pozita e pun&#235s</p>
-
-                    </li>
-                    <li class="person">
-                        <img src="images/dashboard/no-profile.png" alt="">
-                        <p class="team_name">Emri Mbiemri</p>
-                        <p class="team_title">Pozita e pun&#235s</p>
-                    </li>
-                    <li class="person">
-                        <img src="images/dashboard/no-profile.png" alt="">
-
-                        <p class="team_name">Emri Mbiemri</p>
-                        <p class="team_title">Pozita e pun&#235s</p>
-                    </li>
-                    <li class="person">
-                        <img src="images/dashboard/no-profile.png" alt="">
-                        <p class="team_name">Emri Mbiemri</p>
-                        <p class="team_title">Pozita e pun&#235s</p>
-                    </li>
-                    <li class="person">
-                        <img src="images/dashboard/no-profile.png" alt="">
-
-                        <p class="team_name">Emri Mbiemri</p>
-                        <p class="team_title">Pozita e pun&#235s</p>
-
-                    </li>
+                    <?php
+                }
+                ?>
                 </ul>
             </div>
         </div>

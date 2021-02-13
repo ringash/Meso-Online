@@ -105,5 +105,13 @@ public function getAllCourses()
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
+public function getAllStaff()
+{
+    $this->query = "select * from staff";
+    $statement = $this->conn->prepare($this->query);
+    $statement->execute();
+    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
 }
 
