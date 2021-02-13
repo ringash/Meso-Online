@@ -62,7 +62,6 @@ footer {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    width: 100vw;
     height: 300px;
     background-color: rgb(6, 42, 83);
     font-family: "Convergence";

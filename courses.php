@@ -24,13 +24,14 @@ include_once 'Logics/userData.php';
         <div id="title">
             <p>&#199far&#235 do t&#235 m&#235sosh?</p>
         </div>
+        
+        <div id="types-of-courses">
         <?php
                 foreach ($courseList as $course) {
                 ?>
-        <div id="types-of-courses">
             <a href="#">
                 <div class="course-box">    
-               <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $course['courseimg'] ).'"/>'; ?>
+                <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $course['courseimg'] ).'"/>'; ?>
                     <p> <?php echo $course['coursename']; ?></p>
                     <p><?php echo $course['couseinfo']; ?></p>
                 </div>
@@ -43,5 +44,6 @@ include_once 'Logics/userData.php';
         <?php include 'footer.php'; ?>
     </footer>
 </body>
+
 
 </html>
