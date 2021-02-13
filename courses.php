@@ -37,56 +37,6 @@ include_once 'Logics/userData.php';
             </a><?php
                 }
                 ?>
-            <a href="#">
-                <div class="course-box">
-                    <img alt="c#" src="images/courses/csharp.jpg" />
-                    <p>C#</p>
-                    <p>2.2M Studenta</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="course-box">
-                    <img alt="MySQL" src="images/courses/sql.png" />
-                    <p>SQL</p>
-                    <p>2M Studenta</p>
-                </div>
-            </a>
-            
-            <a href="#">
-                <div class="course-box">
-                    <img alt="java" src="images/courses/blank.png" />
-                    <p>Kurs</p>
-                    <p>Nr. Studenta</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="course-box">
-                    <img alt="java" src="images/courses/blank.png" />
-                    <p>Kurs</p>
-                    <p>Nr. Studenta</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="course-box">
-                    <img alt="java" src="images/courses/blank.png" />
-                    <p>Kurs</p>
-                    <p>Nr. Studenta</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="course-box">
-                    <img alt="java" src="images/courses/blank.png" />
-                    <p>Kurs</p>
-                    <p>Nr. Studenta</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="course-box">
-                    <img alt="java" src="images/courses/blank.png" />
-                    <p>Kurs</p>
-                    <p>Nr. Studenta</p>
-                </div>
-            </a>
         </div>
     </div>
     <footer>
