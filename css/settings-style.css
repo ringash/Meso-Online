@@ -1,0 +1,14 @@
+td {
+    padding: 20px;
+    border: 2px solid rgb(27, 188, 154);
+    /* border-radius: 10%; */
+}
+
+#userlist {
+    margin: 10%;
+    padding-bottom: 10%;
+}
+
+.titles {
+    font-weight: bolder;
+}

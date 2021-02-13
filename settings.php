@@ -1,18 +1,26 @@
+
 <?php
 include_once 'Logics/userData.php';
  $mapper =  new userData();
  $userList = $mapper->getAllUsers();
-
+ 
 ?>
+<head>
+<link rel="stylesheet" type="text/css" href="css/settings-style.css">
+</head>
+<body>
+    
+<header>
+        <?php include 'header.php'; ?>
+    </header>
 
-
-<div>
+<div id="adminsettings">
     <h1>Admin Settings</h1>
-    <div>
+    <div id="userlist">
         <h2>User list:</h2>
         <table>
             <thead>
-                <tr>
+                <tr class="titles">
                     <td>Username</td>
                     <td>Email</td>
                 </tr>
@@ -24,6 +32,32 @@ include_once 'Logics/userData.php';
                     <tr>
                         <td><?php echo $user['username']; ?></td>
                         <td><?php echo $user['email']; ?></td>
+                        
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+        <h2>contact list:</h2>
+        <table>
+            <thead>
+                <tr class="titles">
+                    <td>name</td>
+                    <td>Email</td>
+                    <td>subject</td>
+                    <td>mesazhi</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($contactList as $contacts) {
+                ?>
+                    <tr>
+                        <td><?php echo $contacts['Emri']; ?></td>
+                        <td><?php echo $contacts['contactEmail']; ?></td>
+                        <td><?php echo $contacts['subject']; ?></td>
+                        <td><?php echo $contacts['mesazhi']; ?></td>
                     </tr>
                 <?php
                 }
@@ -33,5 +67,8 @@ include_once 'Logics/userData.php';
     </div>
 </div>
 
-
+    <footer>
+        <?php include 'footer.php'; ?>
+    </footer>
+</body>
 
