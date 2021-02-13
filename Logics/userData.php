@@ -66,11 +66,11 @@ class userData extends DatabasePDOConfiguration
         $statement->execute();
     }
 
-    public function deleteUser($username)
+    public function deleteUser($id)
     {
-        $this->query = "delete from usersinfo where username=:username";
+        $this->query = "delete from usersinfo where id=:id";
         $statement = $this->conn->prepare($this->query);
-        $statement->bindParam(":username", $username);
+        $statement->bindParam(":id", $id);
         $statement->execute();
     }
     public function getAllContacts()

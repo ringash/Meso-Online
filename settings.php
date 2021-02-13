@@ -34,8 +34,8 @@ include_once 'Logics/userData.php';
                     <tr>
                         <td><?php echo $user['username']; ?></td>
                         <td><?php echo $user['email']; ?></td>
-                        <td><a href=<?php echo "edit.php?id=" . $user['id'];
-                                    ?>>Modifiko</td>
+                        <td><a href=<?php echo "edit.php?id=" . $user['id']; ?>>Modifiko</td>
+                        <td><a href=<?php echo "Logics/deleteUser.php?id=" . $user['id']; ?>>Fshij</td>
                     </tr>
                 <?php
                 }
