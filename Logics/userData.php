@@ -31,6 +31,25 @@ class userData extends DatabasePDOConfiguration
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
+    public function getUserByID($userId)
+    {
+        $this->query = "select * from usersinfo where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":id", $userId);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+    public function edit(\SimpleUser $user, $id)
+    {
+        $this->query = "update usersinfo set username=:username where id=:id";
+        var_dump($user);
+        $statement = $this->conn->prepare($this->query);
+        $username = $user->getUsername();
+        $statement->bindParam(":username", $username);
+        $statement->bindParam(":id", $id);
+        $statement->execute();
+    }
 
     public function insertUser(\SimpleUser $user)
     {
