@@ -54,4 +54,30 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(":username", $username);
         $statement->execute();
     }
+    public function getAllContacts()
+    {
+        $this->query = "select * from contacts";
+        $statement = $this->conn->prepare($this->query);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function insertContact($contact1)
+    
+{
+    $this->query = "insert into contacts (Emri,contactEmail, subject, mesazhi) values (:contactname,:contactemail,:subject,:message)";
+    $statement = $this->conn->prepare($this->query);
+    $username = $contact1->getUsername();
+    $email=$contact1->getEmail();
+    $pass = $contact1->getPassword();
+    $role = $contact1->getRole();
+    $statement->bindParam(":username", $username);
+    $statement->bindParam(":email", $email);
+    $statement->bindParam(":pass", $pass);
+    $statement->bindParam(":role", $role);
+    $statement->execute();
 }
+
+}
+
