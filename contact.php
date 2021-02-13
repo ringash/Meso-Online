@@ -14,7 +14,7 @@
     <header>
         <?php include 'header.php'; ?>
     </header>
-    <div id="contact">
+    <form id="contact" method="post", action="Logics/contactClass.php">
         <div id="contact-pic">
             <img src="images/contact/img-01.png" alt="IMG">
         </div>
@@ -23,10 +23,10 @@
                 <h1>Trego najsen</h1>
             </div>
             <div class="write">
-                <input class="input1" type="text" name="name" placeholder="Emri">
+                <input class="input1" type="text" name="contact-name" placeholder="Emri">
             </div>
             <div class="write">
-                <input class="input1" type="text" name="email" placeholder="Email">
+                <input class="input1" type="text" name="contact-email" placeholder="Email">
             </div>
             <div class="write">
                 <input class="input1" type="text" name="subject" placeholder="Tema">
@@ -37,7 +37,7 @@
             <button id="submit" type="button" onclick="validate(2)">D&#235rgo Email</button>
         </div>
 
-    </div>
+    </form>
 
     <footer>
         <?php include 'footer.php'; ?>

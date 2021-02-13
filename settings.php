@@ -3,6 +3,8 @@
 include_once 'Logics/userData.php';
  $mapper =  new userData();
  $userList = $mapper->getAllUsers();
+ $mapper1 =  new userData();
+ $contactList = $mapper1->getAllContacts();
  
 ?>
 <head>

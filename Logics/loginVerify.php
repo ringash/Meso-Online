@@ -7,7 +7,12 @@ session_start();
 if (isset($_POST['login-btn'])) {
     $login = new Login($_POST);
     $login->verifyData();
-}else {
+} else if (isset($_POST['register-btn'])) {
+    $register = new Register($_POST);
+    $register->insertData();
+    
+}
+else {
     header("Location:../dashboard.php");
 }
 
@@ -77,11 +82,11 @@ class Register
        
     }
 
-    public function insertUser()
+    public function insertData()
     {
         $user = new SimpleUser($this->username,$this->email , $this->password, 0);
         $mapper = new UserData();
         $mapper->insertUser($user);
-        header("Location:../dashboard.php");
+       echo 'ka mbrri deri te insert';
     }
 }

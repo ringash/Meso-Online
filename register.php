@@ -19,7 +19,7 @@
         ?>
     </header>
 
-    <div class="register forma shown" id="register-form">
+    <from class="register forma shown" id="register-form" action="Logics/loginVerify.php" method="post">
         <div id="user-img">
             <img alt="user" src="images/login/user.png" />
         </div>
@@ -38,9 +38,9 @@
         <div id="confirm-password" class="inputs">
             <p>Confirm Password</p>
             <input class="input1" type="password" name="confpassword">
-        </div>
+        </div>      
         <div>
-            <button id="submit" type="button"  name="register-btn" onclick="validate(1)">Regjistrohu</button>
+            <button id="submit" type="submit"  name="register-btn" value="register" onclick="validate(1)">Regjistrohu</button>
         </div>
         <div id="cond-link">
             <a href="#" onclick="show(1)">Lexo kushtet e regjistrimit</a>
@@ -48,7 +48,7 @@
         <div id="click-here">
             <a href="login.php ">Ke account?</a>
         </div>
-    </div>
+    </from>
 
     <div class="terms forma hidden" id="termsNCond">
         <div id="user-img">
