@@ -17,7 +17,7 @@
     <div id="header-list">
         <a href="courses.php">KURSET</a>
         <a href="about-us.php">RRETH NESH</a>
-        <a href="contact.php">KONTAKTI</a>
+        <a href="Contact/contact.php">KONTAKTI</a>
         <a href="settings.php">SETTINGS</a>
     </div>
     <div id="login-register">
