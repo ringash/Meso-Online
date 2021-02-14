@@ -7,10 +7,10 @@
     <title>Regjistrohu - M&#235so online</title>
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
-    <link rel="stylesheet" href="css/main-style.css" />
-    <link rel="stylesheet" href="css/dashboard-style.css" />
-    <link rel="stylesheet" href="css/about-us-style.css" />
-    <link rel="stylesheet" href="css/register-style.css" />
+    <link rel="stylesheet" href="../css/main-style.css" />
+    <link rel="stylesheet" href="../css/dashboard-style.css" />
+    <link rel="stylesheet" href="../css/about-us-style.css" />
+    <link rel="stylesheet" href="../css/register-style.css" />
 </head>
 
 <body>
@@ -19,9 +19,9 @@
         ?>
     </header>
 
-    <from class="register forma shown" id="register-form" action="Logics/loginVerify.php" method="post">
+    <form class="register forma shown" id="register-form" action="loginVerify.php" method="post">
         <div id="user-img">
-            <img alt="user" src="images/login/user.png" />
+            <img alt="user" src="../images/login/user.png" />
         </div>
         <div id="emri" class="inputs">
             <p>Username</p>
@@ -40,7 +40,7 @@
             <input class="input1" type="password" name="confpassword">
         </div>      
         <div>
-            <button id="submit" type="submit"  name="register-btn" value="register" onclick="validate(1)">Regjistrohu</button>
+            <button id="submit" type="submit"  name="reg-btn" value="register">Regjistrohu</button>
         </div>
         <div id="cond-link">
             <a href="#" onclick="show(1)">Lexo kushtet e regjistrimit</a>
@@ -48,7 +48,7 @@
         <div id="click-here">
             <a href="login.php ">Ke account?</a>
         </div>
-    </from>
+    </form>
 
     <div class="terms forma hidden" id="termsNCond">
         <div id="user-img">

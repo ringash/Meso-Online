@@ -1,6 +1,6 @@
 
 <?php
-include_once 'Logics/userData.php';
+include_once '../Logics/userData.php';
  $mapper =  new userData();
  $userList = $mapper->getAllUsers();
  $mapper1 =  new userData();
@@ -8,7 +8,7 @@ include_once 'Logics/userData.php';
  
 ?>
 <head>
-<link rel="stylesheet" type="text/css" href="css/settings-style.css">
+<link rel="stylesheet" type="text/css" href="../css/settings-style.css">
 </head>
 <body>
     
@@ -16,8 +16,8 @@ include_once 'Logics/userData.php';
         <?php include 'header.php'; ?>
     </header>
 
-<div id="adminsettings">
     <h1>Admin Settings</h1>
+<div id="adminsettings">
     <div id="userlist">
         <h2>User list:</h2>
         <table>
@@ -25,6 +25,8 @@ include_once 'Logics/userData.php';
                 <tr class="titles">
                     <td>Username</td>
                     <td>Email</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
                 </tr>
             </thead>
             <tbody>
@@ -35,7 +37,7 @@ include_once 'Logics/userData.php';
                         <td><?php echo $user['username']; ?></td>
                         <td><?php echo $user['email']; ?></td>
                         <td><a href=<?php echo "edit.php?id=" . $user['id']; ?>>Modifiko</td>
-                        <td><a href=<?php echo "Logics/deleteUser.php?id=" . $user['id']; ?>>Fshij</td>
+                        <td><a href=<?php echo "../Logics/deleteUser.php?id=" . $user['id']; ?>>Fshij</td>
                     </tr>
                 <?php
                 }

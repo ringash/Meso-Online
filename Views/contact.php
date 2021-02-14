@@ -5,7 +5,7 @@
     <title>Kontakti - M&#235so Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="css/contact-style.css">
+    <link rel="stylesheet" type="text/css" href="../css/contact-style.css">
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
 </head>
 
@@ -14,9 +14,9 @@
     <header>
         <?php include 'header.php'; ?>
     </header>
-    <form id="contact" method="post", action="Logics/contactClass.php">
+    <form id="contact" method="post" action="Contact/contactClass.php">
         <div id="contact-pic">
-            <img src="images/contact/img-01.png" alt="IMG">
+            <img src="../images/contact/img-01.png" alt="IMG">
         </div>
         <div id="contact-form">
             <div id="talk">
@@ -34,7 +34,7 @@
             <div class="write">
                 <textarea id="form-message" class="input1" name="message" placeholder="Mesazhi"></textarea>
             </div>
-            <button id="submit" type="button" name="contact-submit" onclick="validate(2)">D&#235rgo Email</button>
+            <button id="submit" type="submit" name="contact-submit" onclick="validate(2)">D&#235rgo Email</button>
         </div>
 
     </form>
@@ -42,7 +42,7 @@
     <footer>
         <?php include 'footer.php'; ?>
     </footer>
-    <script src="js/login-register-contact.js"></script>
+    <script src="../js/login-register-contact.js"></script>
 </body>
 
 </html>

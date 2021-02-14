@@ -82,19 +82,19 @@ class userData extends DatabasePDOConfiguration
         return $result;
     }
 
-    public function insertContact(\Contact $contact1)
+    public function insertContact(\Contact1 $contact1)
 
 {
-    $this->query = "insert into contacts (Emri,contactEmail, subject, mesazhi) values (:contactname,:contactemail,:subject,:message)";
+    $this->query = "insert into contacts (Emri,contactEmail, subject, mesazhi) values (:Emri,:contactEmail,:subject,:mesazhi)";
     $statement = $this->conn->prepare($this->query);
     $username = $contact1->getname();
     $email=$contact1->getcontactEmail();
     $subject = $contact1->getSubject();
     $message = $contact1->getMessage();
-    $statement->bindParam(":username", $username);
-    $statement->bindParam(":email", $email);
-    $statement->bindParam(":pass", $subject);
-    $statement->bindParam(":role", $message);
+    $statement->bindParam(":Emri", $username);
+    $statement->bindParam(":contactEmail", $email);
+    $statement->bindParam(":subject", $subject);
+    $statement->bindParam(":mesazhi", $message);
     $statement->execute();
 }
 public function getAllCourses()

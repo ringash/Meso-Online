@@ -1,13 +1,13 @@
 <?php
-include_once 'adminUser.php';
-include_once 'simpleUser.php';
-require_once 'userData.php';
+include_once '../Logics/adminUser.php';
+include_once '../Logics/simpleUser.php';
+require_once '../Logics/userData.php';
 session_start();
 
 if (isset($_POST['login-btn'])) {
     $login = new Login($_POST);
     $login->verifyData();
-} else if (isset($_POST['register-btn'])) {
+} else if (isset($_POST['reg-btn'])) {
     $register = new Register($_POST);
     $register->insertData();
     
@@ -87,6 +87,6 @@ class Register
         $user = new SimpleUser($this->username,$this->email , $this->password, 0);
         $mapper = new UserData();
         $mapper->insertUser($user);
-       echo 'ka mbrri deri te insert';
+        header("Location:../Views/dashboard.php");
     }
 }

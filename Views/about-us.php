@@ -7,12 +7,12 @@
     <title>Rreth nesh - M&#235so Online</title>
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
-    <link rel="stylesheet" href="css/main-style.css" />
-    <link rel="stylesheet" href="css/dashboard-style.css" />
-    <link rel="stylesheet" href="css/about-us-style.css" />
+    <link rel="stylesheet" href="../css/main-style.css" />
+    <link rel="stylesheet" href="../css/dashboard-style.css" />
+    <link rel="stylesheet" href="../css/about-us-style.css" />
 </head>
 <?php
-include_once 'Logics/userData.php';
+include_once '../Logics/userData.php';
  $mapper3 =  new userData();
  $staffList = $mapper3->getAllStaff();
  ?>
@@ -24,15 +24,15 @@ include_once 'Logics/userData.php';
     <div id="about-us">
         <div class="slider">
             <div class="slider-content active">
-                <img src="images/about-us/staff-photo.png" alt="">
+                <img src="../images/about-us/staff-photo.png" alt="">
                 <h1>Stafi yne</h1>
             </div>
             <div class="slider-content not-active">
-                <img src="images/about-us/about-us-slider2.jpg" alt="" />
+                <img src="../images/about-us/about-us-slider2.jpg" alt="" />
                 <h1>Hapesira jone e punes</h1>
             </div>
             <div class="slider-content not-active">
-                <img src="images/about-us/about-us-slider3.jpg" alt="" />
+                <img src="../images/about-us/about-us-slider3.jpg" alt="" />
                 <h1>Meso Online HQ</h1>
             </div>
         </div>
@@ -65,7 +65,7 @@ include_once 'Logics/userData.php';
             </div>
         </div>
     </div>
-    <script src="js/slider.js"></script>
+    <script src="../js/slider.js"></script>
     <footer>
         <?php include 'footer.php'; ?>
     </footer>

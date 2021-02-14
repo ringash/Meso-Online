@@ -7,7 +7,7 @@
     <title>Ballina - M&#235so Online</title>
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
-    <link rel="stylesheet" href="css/dashboard-style.css" />
+    <link rel="stylesheet" href="../css/dashboard-style.css" />
 </head>
 
 <body>
@@ -33,7 +33,7 @@
                 </div>
                 <div id="person">
                     <div class="review-img">
-                        <img alt="profile" src="images/dashboard/no-profile.png" />
+                        <img alt="profile" src="../images/dashboard/no-profile.png" />
                     </div>
                     <div id="name">
                         <p>Emri Mbiemri</p>
@@ -46,7 +46,7 @@
                 </div>
                 <div id="person">
                     <div class="review-img">
-                        <img alt="profile" src="images/dashboard/no-profile.png" />
+                        <img alt="profile" src="../images/dashboard/no-profile.png" />
                     </div>
                     <div id="name">
                         <p>Emri Mbiemri</p>
@@ -59,7 +59,7 @@
                 </div>
                 <div id="person">
                     <div class="review-img">
-                        <img alt="profile" src="images/dashboard/no-profile.png" />
+                        <img alt="profile" src="../images/dashboard/no-profile.png" />
                     </div>
                     <div id="name">
                         <p>Emri Mbiemri</p>

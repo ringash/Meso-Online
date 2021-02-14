@@ -8,11 +8,11 @@
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;900&family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main-style.css" />
-    <link rel="stylesheet" href="css/courses-style.css" />
+    <link rel="stylesheet" href="../css/main-style.css" />
+    <link rel="stylesheet" href="../css/courses-style.css" />
 </head>
 <?php
-include_once 'Logics/userData.php';
+include_once '../Logics/userData.php';
  $mapper2 =  new userData();
  $courseList = $mapper2->getAllCourses();
  ?>

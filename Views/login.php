@@ -7,10 +7,10 @@
     <title>Ky&#231u - M&#235so Online</title>
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
-    <link rel="stylesheet" href="css/main-style.css" />
-    <link rel="stylesheet" href="css/dashboard-style.css" />
-    <link rel="stylesheet" href="css/about-us-style.css" />
-    <link rel="stylesheet" href="css/login-style.css" />
+    <link rel="stylesheet" href="../css/main-style.css" />
+    <link rel="stylesheet" href="../css/dashboard-style.css" />
+    <link rel="stylesheet" href="../css/about-us-style.css" />
+    <link rel="stylesheet" href="../css/login-style.css" />
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 </header>
     <div id="login-form">
         <div id="user-img">
-            <img alt="user" src="images/login/user.png" />
+            <img alt="user" src="../images/login/user.png" />
         </div>
         <div class="u-p">
             <p>Username</p>
@@ -37,7 +37,7 @@
             <a href="register.php">Nuk ke account?</a>
         </div>
     </div>
-    <script src="js/login-register-contact.js"></script>
+    <script src="../js/login-register-contact.js"></script>
 </body>
 
 </html>
