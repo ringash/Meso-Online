@@ -35,9 +35,11 @@
         </div>
         <div id="click-here">
             <a href="register.php">Nuk ke account?</a>
+            <a href="../Logics/logout.php">logout</a>
         </div>
     </form>
-    <script src="../js/login-register-contact.js"></script>
+
+    <!-- <script src="../js/login-register-contact.js"></script> -->
 </body>
 
 </html>

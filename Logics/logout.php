@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_destroy();
-header('Location:../dashboard.php');
+header('Location:../Views/dashboard.php');
 ?>
