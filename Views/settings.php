@@ -1,11 +1,14 @@
-
 <?php
 include_once '../Logics/userData.php';
+if ( $_SESSION['roleName'] = "Administrator") {
  $mapper =  new userData();
  $userList = $mapper->getAllUsers();
  $mapper1 =  new userData();
  $contactList = $mapper1->getAllContacts();
- 
+} else {
+  
+     header("Location:dashboard.php");
+}
 ?>
 <head>
 <link rel="stylesheet" type="text/css" href="../css/settings-style.css">
@@ -76,4 +79,3 @@ include_once '../Logics/userData.php';
         <?php include 'footer.php'; ?>
     </footer>
 </body>
-

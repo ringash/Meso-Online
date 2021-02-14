@@ -57,7 +57,7 @@ class userData extends DatabasePDOConfiguration
         $statement = $this->conn->prepare($this->query);
         $username = $user->getUsername();
         $email=$user->getEmail();
-        $pass = $user->getPassword();
+        $pass =password_hash( $user->getPassword(),PASSWORD_BCRYPT);
         $role = $user->getRole();
         $statement->bindParam(":username", $username);
         $statement->bindParam(":email", $email);

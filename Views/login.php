@@ -18,7 +18,7 @@
     <?php include 'header.php';
     ?>
 </header>
-    <div id="login-form">
+    <form id="login-form" action="LoginTest.php" method="POST">
         <div id="user-img">
             <img alt="user" src="../images/login/user.png" />
         </div>
@@ -28,15 +28,15 @@
         </div>
         <div class="u-p">
             <p>Password</p>
-            <input class="input1" type="password" name="password">
+            <input class="input1" type="password" name="pass">
         </div>
         <div>
-            <button id="submit" type="button" name="login-btn" onclick="validate(0)">Ky&#231u</button>
+            <button id="submit" type="submit" name="lgn-btn" onclick="validate(0)">Ky&#231u</button>
         </div>
         <div id="click-here">
             <a href="register.php">Nuk ke account?</a>
         </div>
-    </div>
+    </form>
     <script src="../js/login-register-contact.js"></script>
 </body>
 
