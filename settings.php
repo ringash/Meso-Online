@@ -16,8 +16,8 @@ include_once 'Logics/userData.php';
         <?php include 'header.php'; ?>
     </header>
 
-<div id="adminsettings">
     <h1>Admin Settings</h1>
+<div id="adminsettings">
     <div id="userlist">
         <h2>User list:</h2>
         <table>
@@ -25,6 +25,8 @@ include_once 'Logics/userData.php';
                 <tr class="titles">
                     <td>Username</td>
                     <td>Email</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
                 </tr>
             </thead>
             <tbody>
