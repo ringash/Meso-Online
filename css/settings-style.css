@@ -1,7 +1,14 @@
+body {
+    font-family: Convergence;
+    background-color: rgb(228, 235, 237);
+}
+
 td {
     padding: 20px;
     border: 2px solid rgb(27, 188, 154);
-    /* border-radius: 10%; */
+    background: rgb(27, 188, 154);
+    color: white;
+    border-radius: 5%;
 }
 
 #userlist {
@@ -11,4 +18,18 @@ td {
 
 .titles {
     font-weight: bolder;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(39, 48, 148);
+    padding-top: 20px;
+}
+
+#adminsettings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
