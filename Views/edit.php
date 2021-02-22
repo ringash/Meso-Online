@@ -1,5 +1,5 @@
 <?php
-include_once 'Logics/userData.php';
+include_once '../Logics/userData.php';
 if (isset($_GET['id'])) {
     $userId = $_GET['id'];
     $mapper = new userData();
@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     </header>
 <div class='container'>
     <h1>Modifiko perdoruesin</h1>
-    <form class="mainForm" action="Logics/editUser1.php" method="get">
+    <form class="mainForm" action="../Logics/editUser1.php" method="get">
         <div class="login forms form-style">
             <input type="text" style="display:none;" value=<?php echo $userId; ?> name="id" />
             <label for="">Name:</label>

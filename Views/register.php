@@ -52,7 +52,7 @@
 
     <div class="terms forma hidden" id="termsNCond">
         <div id="user-img">
-            <img alt="user" src="images/login/user.png" />
+            <img alt="user" src="../images/login/user.png" />
         </div>
         <h3>Kushtet tona t&#235 regjistrimit:</h3>
         <div id="conditions">
@@ -87,9 +87,9 @@
         <p id="exInfo">Kur ju regjistroheni, ju pranoni kushtet tona!</p>
         <a href="#" onclick="show(0)">Kthehu n&#235 regjistrim</a>
     </div>
-
-    <script src="js/register.js"></script>
-    <script src="js/login-register-contact.js"></script>
+<!-- 
+    <script src="../js/register.js"></script>
+    <script src="../js/login-register-contact.js"></script> -->
 </body>
 
 </html>

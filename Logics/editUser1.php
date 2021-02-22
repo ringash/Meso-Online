@@ -8,5 +8,5 @@ if (isset($_GET['username']) && isset($_GET['username'])) {
     $simpleUser = new SimpleUser($username, "","",1 );
     $mapper = new userData();
     $mapper->edit($simpleUser, $userId);
-    header("Location:../settings.php");
+    header("Location:../Views/settings.php");
 }
