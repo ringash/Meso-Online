@@ -105,6 +105,16 @@ public function getAllCourses()
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
+
+public function getCourseByID($courseId)
+    {
+        $this->query = "select * from courses where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":id", $courseId);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
 public function getAllStaff()
 {
     $this->query = "select * from staff";

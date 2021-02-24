@@ -39,6 +39,7 @@ include_once '../Logics/userData.php';
                 <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $course['courseimg'] ).'"/>'; ?>
                     <p> <?php echo $course['coursename']; ?></p>
                     <p><?php echo $course['couseinfo']; ?></p>
+                    <p><a href=<?php echo "../Logics/pdf.php?id=" . $course['id']; ?>>kliko</p>
                 </div>
             </a><?php
                 }
