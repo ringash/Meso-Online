@@ -15,11 +15,7 @@
         </a>
     </div>
     <div id="header-list">
-    <?php if (isset($_SESSION["role"])){
-        ?>
         <a href="courses.php">KURSET</a>
-        <?php }
-        ?>
         <a href="about-us.php">RRETH NESH</a>
         <a href="Contact/contact.php">KONTAKTI</a>
         <?php if (isset($_SESSION["role"]) && $_SESSION["role"] == '1'){

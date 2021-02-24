@@ -1,5 +1,7 @@
 <?php
 include_once 'userData.php';
+session_start();
+if (isset($_SESSION["role"])) {  
 if (isset($_GET['id'])) {
     $courseId = $_GET['id'];
     $mapper = new userData();
@@ -12,5 +14,9 @@ if (isset($_GET['id'])) {
     header('Accept-Ranges: bytes');
     readfile($file);
 
-}
+}}else{
 ?>
+ <script>alert ("ju duhet te jeni te kycur fillimisht");</script>
+ <?php 
+ header('Location:../Views/login.php');}
+ ?>

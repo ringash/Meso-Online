@@ -8,6 +8,18 @@ if (isset($_GET['id'])) {
 ?>
 <header>
         <?php include 'header.php'; ?>
+        <style>
+        body {
+        font-family: Convergence;
+        background-color: rgb(228, 235, 237); 
+}
+.container{
+    margin:10%;
+}
+.mainForm{
+    padding:40px;
+}
+        </style>
     </header>
 <div class='container'>
     <h1>Modifiko perdoruesin</h1>
