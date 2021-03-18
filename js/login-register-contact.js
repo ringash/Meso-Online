@@ -13,9 +13,10 @@ function validate(number) {
             alert('Shenoni Username');
         } else if (inputList[1].value == "") {
             alert('Shenoni Password');
-        } else {
-            alert('Kycja u be me sukses!');
         }
+        //  else {
+        //     alert('Kycja u be me sukses!');
+        // }
     } else if (number == 1) {
         //register-form
         if (inputList[0].value == "" && inputList[1].value == "" &&
@@ -31,9 +32,10 @@ function validate(number) {
             alert('Shenoni Confirm Password');
         } else if (inputList[2].value != inputList[3].value) {
             alert('Password dhe Confirm Password nuk jane te njejte!');
-        } else {
-            alert('Regjistrimi u be me sukses!');
         }
+        //  else {
+        //     alert('Regjistrimi u be me sukses!');
+        // }
     } else if (number == 2) {
         //contact-form
         if (inputList[0].value == "" && inputList[1].value == "" &&
@@ -47,8 +49,9 @@ function validate(number) {
             alert('Shenoni Temen');
         } else if (inputList[3].value == "") {
             alert('Shenoni Mesazhin');
-        } else {
-            alert('Do te degjohemi se shpejti!');
         }
-    } 
+        //  else {
+        //     alert('Do te degjohemi se shpejti!');
+        // }
+    }
 }

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,26 +15,21 @@
 
 <body>
 
-    <header>
-    <div id="header-logo">
-        <a href="../dashboard.php" alt="dashboard">
+    <header>  <div id="header-logo">
+        <a href="dashboard.php" alt="dashboard">
             <img alt="logo" src="../../images/main/laptop-logo.png" />
         </a>
     </div>
     <div id="header-list">
-    <?php if (isset($_SESSION["role"])){
-        ?>
         <a href="../courses.php">KURSET</a>
-        <?php }
-        ?>
         <a href="../about-us.php">RRETH NESH</a>
-        <a href="../Contact/contact.php">KONTAKTI</a>
+        <a href="contact.php">KONTAKTI</a>
         <?php if (isset($_SESSION["role"]) && $_SESSION["role"] == '1'){
         ?>
-        <a href="../settings.php">SETTINGS</a>
+        <a href="settings.php">SETTINGS</a>
         <?php }
         ?>
-    </div>
+    </div>  
     <div id="login-register">
     <?php if (!isset($_SESSION["role"])){
         ?>
@@ -95,7 +93,7 @@
         </div>
     </div>
     </footer>
-    <script src="../js/login-register-contact.js"></script>
+    <!-- <script src="../../js/login-register-contact.js"></script> -->
 </body>
 
 </html>

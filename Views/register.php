@@ -40,7 +40,7 @@
             <input class="input1" type="password" name="confpassword">
         </div>      
         <div>
-            <button id="submit" type="submit"  name="reg-btn" value="register">Regjistrohu</button>
+            <button id="submit" type="submit"  name="reg-btn" value="register" onclick="validate(1)">Regjistrohu</button>
         </div>
         <div id="cond-link">
             <a href="#" onclick="show(1)">Lexo kushtet e regjistrimit</a>
@@ -87,9 +87,9 @@
         <p id="exInfo">Kur ju regjistroheni, ju pranoni kushtet tona!</p>
         <a href="#" onclick="show(0)">Kthehu n&#235 regjistrim</a>
     </div>
-<!-- 
+
     <script src="../js/register.js"></script>
-    <script src="../js/login-register-contact.js"></script> -->
+    <script src="../js/login-register-contact.js"></script>
 </body>
 
 </html>
