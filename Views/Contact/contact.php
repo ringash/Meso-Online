@@ -22,6 +22,10 @@ session_start();
     </div>
     <div id="header-list">
         <a href="../courses.php">KURSET</a>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 56e3bf613b7da1ea2679b99e7ff301c15392285b
         <a href="../about-us.php">RRETH NESH</a>
         <a href="contact.php">KONTAKTI</a>
         <?php if (isset($_SESSION["role"]) && $_SESSION["role"] == '1'){

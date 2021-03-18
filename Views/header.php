@@ -27,13 +27,14 @@
     </div>
     <div id="login-register">
     <?php if (!isset($_SESSION["role"])){
-        ?>
+    ?>
         <a href="login.php">KY&#199U</a>
         <a href="register.php">REGJISTROHU</a>
-        <?php } if (isset($_SESSION["role"])){
-        ?>
-        <a href="../Logics/logout.php">LOG OUT</a>
-        <?php }?>
+    <?php }
+        if (isset($_SESSION["role"])){
+    ?>
+        <a href="../Logics/logout.php" style="width: 95px;">LOG OUT</a>
+    <?php }?>
     </div>
 </body>
 
