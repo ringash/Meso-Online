@@ -30,18 +30,18 @@ include_once '../Logics/userData.php';
         
         <div id="types-of-courses">
         <?php
-                foreach ($courseList as $course) {
-                ?>
-            <a href="#">
+            foreach ($courseList as $course) {
+        ?>
+            <a href=<?php echo "../Logics/pdf.php?id=" . $course['id']; ?>>
                 <div class="course-box">    
                 <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $course['courseimg'] ).'"/>'; ?>
                     <p> <?php echo $course['coursename']; ?></p>
                     <p><?php echo $course['couseinfo']; ?></p>
-                    <p><a href=<?php echo "../Logics/pdf.php?id=" . $course['id']; ?>>kliko</p>
                 </div>
-            </a><?php
-                }
-                ?>
+            </a>
+        <?php
+            }
+        ?>
         </div>
     </div>
     <footer>
