@@ -31,7 +31,7 @@ class Contact
         $contact1 = new Contact1($this->contactname,$this->contactemail , $this->subject,  $this->message);
         $mapper = new UserData();
         $mapper->insertContact($contact1);
-        header("Location:../dashboard.php");
+        header("Location:../index.php");
     }
 }
 ?>

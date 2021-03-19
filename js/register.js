@@ -1,16 +1,25 @@
-function show(number) {
-  var format = document.getElementsByClassName("forma");
-  if (number == 0) {
-    format[0].classList.add("shown");
-    format[0].classList.remove("hidden");
+document.getElementById('submit').addEventListener("click", function(event) {
+    event.preventDefault();
+    validate();
+})
 
-    format[1].classList.add("hidden");
-    format[1].classList.remove("shown");
-  } else if (number == 1) {
-    format[1].classList.add("shown");
-    format[1].classList.remove("hidden");
-
-    format[0].classList.add("hidden");
-    format[0].classList.remove("shown");
-  }
+function validate() {
+//register-form
+    if (inputList[0].value == "" && inputList[1].value == "" &&
+        inputList[2].value == "" && inputList[3].value == "") {
+        alert('Nuk jane te mbushura te dhenat!');
+    } else if (inputList[0].value == "") {
+        alert('Shenoni Username');
+    } else if (inputList[1].value == "") {
+        alert('Shenoni Email');
+    } else if (inputList[2].value == "") {
+        alert('Shenoni Password');
+    } else if (inputList[3].value == "") {
+        alert('Shenoni Confirm Password');
+    } else if (inputList[2].value != inputList[3].value) {
+        alert('Password dhe Confirm Password nuk jane te njejte!');
+    }
+//  else {
+//     alert('Regjistrimi u be me sukses!');
+// }
 }

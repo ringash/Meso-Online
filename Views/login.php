@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
     <link rel="stylesheet" href="../css/main-style.css" />
-    <link rel="stylesheet" href="../css/dashboard-style.css" />
+    <link rel="stylesheet" href="../css/index-style.css" />
     <link rel="stylesheet" href="../css/about-us-style.css" />
     <link rel="stylesheet" href="../css/login-style.css" />
 </head>
@@ -18,7 +18,7 @@
     <?php include 'header.php';
     ?>
 </header>
-    <form id="login-form" action="LoginTest.php" method="POST">
+    <form id="login-form" action="LoginVerify.php" method="post" onsubmit="return validate()">
         <div id="user-img">
             <img alt="user" src="../images/login/user.png" />
         </div>
@@ -31,14 +31,14 @@
             <input class="input1" type="password" name="pass">
         </div>
         <div>
-            <button id="submit" type="submit" name="lgn-btn" onclick="validate(0)">Ky&#231u</button>
+            <button id="submit" type="submit" name="lgn-btn">Ky&#231u</button>
         </div>
         <div id="click-here">
             <a href="register.php">Nuk ke account?</a>
         </div>
     </form>
-
-    <!-- <script src="../js/login-register-contact.js"></script> -->
+<!-- 
+    <script src="../js/login.js"></script> -->
 </body>
 
 </html>

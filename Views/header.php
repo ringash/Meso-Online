@@ -11,7 +11,7 @@
 
 <body>
     <div id="header-logo">
-        <a href="dashboard.php" alt="dashboard">
+        <a href="index.php" alt="home">
             <img alt="logo" src="../images/main/laptop-logo.png" />
         </a>
     </div>

@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
     <link rel="stylesheet" href="../css/main-style.css" />
-    <link rel="stylesheet" href="../css/dashboard-style.css" />
+    <link rel="stylesheet" href="../css/index-style.css" />
     <link rel="stylesheet" href="../css/about-us-style.css" />
     <link rel="stylesheet" href="../css/register-style.css" />
 </head>
@@ -19,7 +19,7 @@
         ?>
     </header>
 
-    <form class="register forma shown" id="register-form" action="loginVerify.php" method="post">
+    <form class="register forma shown" id="register-form" action="RegisterVerify.php" method="post" onsubmit="return validate()">
         <div id="user-img">
             <img alt="user" src="../images/login/user.png" />
         </div>
@@ -40,7 +40,7 @@
             <input class="input1" type="password" name="confpassword">
         </div>      
         <div>
-            <button id="submit" type="submit"  name="reg-btn" value="register" onclick="validate(1)">Regjistrohu</button>
+            <button id="submit" type="submit"  name="reg-btn" value="register">Regjistrohu</button>
         </div>
         <div id="cond-link">
             <a href="#" onclick="show(1)">Lexo kushtet e regjistrimit</a>
@@ -89,7 +89,7 @@
     </div>
 
     <script src="../js/register.js"></script>
-    <script src="../js/login-register-contact.js"></script>
+    <script src="../js/registerDivs.js"></script>
 </body>
 
 </html>

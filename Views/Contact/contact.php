@@ -16,16 +16,12 @@ session_start();
 <body>
 
     <header>  <div id="header-logo">
-        <a href="dashboard.php" alt="dashboard">
+        <a href="../index.php" alt="index">
             <img alt="logo" src="../../images/main/laptop-logo.png" />
         </a>
     </div>
     <div id="header-list">
         <a href="../courses.php">KURSET</a>
-<<<<<<< HEAD
-=======
-        
->>>>>>> 56e3bf613b7da1ea2679b99e7ff301c15392285b
         <a href="../about-us.php">RRETH NESH</a>
         <a href="contact.php">KONTAKTI</a>
         <?php if (isset($_SESSION["role"]) && $_SESSION["role"] == '1'){
@@ -41,11 +37,11 @@ session_start();
         <a href="../register.php">REGJISTROHU</a>
         <?php } if (isset($_SESSION["role"])){
         ?>
-        <a href="../../Logics/logout.php">LOG OUT</a>
+        <a href="../../Logics/logout.php" style="width: 95px;">LOG OUT</a>
         <?php }?>
     </div>
     </header>
-    <form id="contact" method="post" action="contactClass.php">
+    <form id="contact" method="post" action="contactClass.php" onsubmit="return validate()">
         <div id="contact-pic">
             <img src="../../images/contact/img-01.png" alt="IMG">
         </div>
@@ -65,7 +61,7 @@ session_start();
             <div class="write">
                 <textarea id="form-message" class="input1" name="message" placeholder="Mesazhi"></textarea>
             </div>
-            <button id="submit" type="submit" name="contact-submit" onclick="validate(2)">D&#235rgo Email</button>
+            <button id="submit" type="submit" name="contact-submit">D&#235rgo Email</button>
         </div>
 
     </form>
@@ -97,7 +93,7 @@ session_start();
         </div>
     </div>
     </footer>
-    <!-- <script src="../../js/login-register-contact.js"></script> -->
+    <script src="../../js/contact.js"></script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@ session_start();
     <title>Ballina - M&#235so Online</title>
     <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/dashboard-style.css" />
+    <link rel="stylesheet" href="../css/index-style.css" />
 </head>
 
 <body>
@@ -22,7 +22,7 @@ session_start();
     </div>
     <div id="welcome">
         <p>M&#235so kodim pa pages&#235!</p>
-        <a href="login.php">Grahi pun&#235s!</a>
+        <a href="courses.php">Grahi pun&#235s!</a>
     </div>
 
     <div id="reviews-content">
@@ -36,7 +36,7 @@ session_start();
                 </div>
                 <div id="person">
                     <div class="review-img">
-                        <img alt="profile" src="../images/dashboard/no-profile.png" />
+                        <img alt="profile" src="../images/index/no-profile.png" />
                     </div>
                     <div id="name">
                         <p>Emri Mbiemri</p>
@@ -49,7 +49,7 @@ session_start();
                 </div>
                 <div id="person">
                     <div class="review-img">
-                        <img alt="profile" src="../images/dashboard/no-profile.png" />
+                        <img alt="profile" src="../images/index/no-profile.png" />
                     </div>
                     <div id="name">
                         <p>Emri Mbiemri</p>
@@ -62,7 +62,7 @@ session_start();
                 </div>
                 <div id="person">
                     <div class="review-img">
-                        <img alt="profile" src="../images/dashboard/no-profile.png" />
+                        <img alt="profile" src="../images/index/no-profile.png" />
                     </div>
                     <div id="name">
                         <p>Emri Mbiemri</p>
