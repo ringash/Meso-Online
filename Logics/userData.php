@@ -12,7 +12,7 @@ class userData extends DatabasePDOConfiguration
         $this->conn = $this->getConnection();
     }
 
-    
+
     public function getUserByUsername($username)
     {
         $this->query = "select * from usersinfo where username=:username";
@@ -56,8 +56,8 @@ class userData extends DatabasePDOConfiguration
         $this->query = "insert into usersinfo (username,email, pass, role) values (:username,:email,:pass,:role)";
         $statement = $this->conn->prepare($this->query);
         $username = $user->getUsername();
-        $email=$user->getEmail();
-        $pass =password_hash( $user->getPassword(),PASSWORD_BCRYPT);
+        $email = $user->getEmail();
+        $pass = password_hash($user->getPassword(), PASSWORD_BCRYPT);
         $role = $user->getRole();
         $statement->bindParam(":username", $username);
         $statement->bindParam(":email", $email);
@@ -84,28 +84,28 @@ class userData extends DatabasePDOConfiguration
 
     public function insertContact(\Contact1 $contact1)
     {
-    $this->query = "insert into contacts (Emri,contactEmail, subject, mesazhi) values (:Emri,:contactEmail,:subject,:mesazhi)";
-    $statement = $this->conn->prepare($this->query);
-    $username = $contact1->getname();
-    $email=$contact1->getcontactEmail();
-    $subject = $contact1->getSubject();
-    $message = $contact1->getMessage();
-    $statement->bindParam(":Emri", $username);
-    $statement->bindParam(":contactEmail", $email);
-    $statement->bindParam(":subject", $subject);
-    $statement->bindParam(":mesazhi", $message);
-    $statement->execute();
-}
-public function getAllCourses()
-{
-    $this->query = "select * from courses";
-    $statement = $this->conn->prepare($this->query);
-    $statement->execute();
-    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-    return $result;
-}
+        $this->query = "insert into contacts (Emri,contactEmail, subject, mesazhi) values (:Emri,:contactEmail,:subject,:mesazhi)";
+        $statement = $this->conn->prepare($this->query);
+        $username = $contact1->getname();
+        $email = $contact1->getcontactEmail();
+        $subject = $contact1->getSubject();
+        $message = $contact1->getMessage();
+        $statement->bindParam(":Emri", $username);
+        $statement->bindParam(":contactEmail", $email);
+        $statement->bindParam(":subject", $subject);
+        $statement->bindParam(":mesazhi", $message);
+        $statement->execute();
+    }
+    public function getAllCourses()
+    {
+        $this->query = "select * from courses";
+        $statement = $this->conn->prepare($this->query);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
 
-public function getCourseByID($courseId)
+    public function getCourseByID($courseId)
     {
         $this->query = "select * from courses where id=:id";
         $statement = $this->conn->prepare($this->query);
@@ -114,20 +114,34 @@ public function getCourseByID($courseId)
         $result = $statement->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
-public function getAllStaff()
-{
-    $this->query = "select * from staff";
-    $statement = $this->conn->prepare($this->query);
-    $statement->execute();
-    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-    return $result;
-}
-public function deleteCourse($id)
+    public function getAllStaff()
+    {
+        $this->query = "select * from staff";
+        $statement = $this->conn->prepare($this->query);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+    public function deleteCourse($id)
     {
         $this->query = "delete from courses where id=:id";
         $statement = $this->conn->prepare($this->query);
         $statement->bindParam(":id", $id);
         $statement->execute();
     }
-}
 
+    public function deleteContact($id)
+    {
+        $this->query = "delete from contacts where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":id", $id);
+        $statement->execute();
+    }
+    public function deleteStaff($id)
+    {
+        $this->query = "delete from staff where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":id", $id);
+        $statement->execute();
+    }
+}

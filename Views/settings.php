@@ -11,6 +11,10 @@ $userList = $mapper->getAllUsers();
 $mapper1 =  new userData();
 $contactList = $mapper1->getAllContacts();
 
+include_once '../Logics/userData.php';
+$mapper3 =  new userData();
+$staffList = $mapper3->getAllStaff();
+
 ?>
 
 <head>
@@ -33,7 +37,7 @@ $contactList = $mapper1->getAllContacts();
             </ul>
         </div>
 
-        <div class="table hidden">
+        <div class="table shown">
             <h2>Lista e Kurseve:</h2>
             <table border="1">
                 <thead>
@@ -87,7 +91,7 @@ $contactList = $mapper1->getAllContacts();
             </table>
         </div>
         <div class="table hidden">
-            <h2>contact list:</h2>
+            <h2>Kontaktet:</h2>
             <table>
                 <thead>
                     <tr class="titles">
@@ -95,17 +99,19 @@ $contactList = $mapper1->getAllContacts();
                         <td>Email</td>
                         <td>subject</td>
                         <td>mesazhi</td>
+                        <td>Delete</td>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($contactList as $contacts) {
+                    foreach ($contactList as $contact) {
                     ?>
                         <tr>
-                            <td><?php echo $contacts['Emri']; ?></td>
-                            <td><?php echo $contacts['contactEmail']; ?></td>
-                            <td><?php echo $contacts['subject']; ?></td>
-                            <td><?php echo $contacts['mesazhi']; ?></td>
+                            <td><?php echo $contact['Emri']; ?></td>
+                            <td><?php echo $contact['contactEmail']; ?></td>
+                            <td><?php echo $contact['subject']; ?></td>
+                            <td><?php echo $contact['mesazhi']; ?></td>
+                            <td><a href=<?php echo "../Logics/deleteContact.php?id=" . $contact['id']; ?>>Fshij</td>
                         </tr>
                     <?php
                     }
@@ -114,25 +120,25 @@ $contactList = $mapper1->getAllContacts();
             </table>
         </div>
         <div class="table hidden">
-            <h2>contact list:</h2>
+            <h2>Stafi:</h2>
             <table>
                 <thead>
                     <tr class="titles">
-                        <td>name</td>
-                        <td>Email</td>
-                        <td>subject</td>
-                        <td>mesazhi</td>
+                        <td>Emri dhe Mbiemri</td>
+                        <td>Pozita e punes</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($contactList as $contacts) {
+                    foreach ($staffList as $staff) {
                     ?>
                         <tr>
-                            <td><?php echo $contacts['Emri']; ?></td>
-                            <td><?php echo $contacts['contactEmail']; ?></td>
-                            <td><?php echo $contacts['subject']; ?></td>
-                            <td><?php echo $contacts['mesazhi']; ?></td>
+                            <td><?php echo $staff['fullname']; ?></td>
+                            <td><?php echo $staff['pozita']; ?></td>
+                            <td><a href=<?php echo "edit.php?id=" . $user['id']; ?>>Modifiko</td>
+                            <td><a href=<?php echo "../Logics/deleteStaff.php?id=" . $user['id']; ?>>Fshij</td>
                         </tr>
                     <?php
                     }
@@ -146,3 +152,15 @@ $contactList = $mapper1->getAllContacts();
         <?php include 'footer.php'; ?>
     </footer>
 </body>
+
+<!-- ?php
+                foreach ($staffList as $staff) {
+                ?>
+                    <li class="person">
+                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($staff['staff-photo']) . '"/>'; ?>
+                        <p class="team_name"><?php echo $staff['fullname']; ?></p>
+                        <p class="team_title"><?php echo $staff['pozita']; ?></p>
+                    </li>
+                    <?php
+
+                    ?> -->
