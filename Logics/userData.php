@@ -83,8 +83,7 @@ class userData extends DatabasePDOConfiguration
     }
 
     public function insertContact(\Contact1 $contact1)
-
-{
+    {
     $this->query = "insert into contacts (Emri,contactEmail, subject, mesazhi) values (:Emri,:contactEmail,:subject,:mesazhi)";
     $statement = $this->conn->prepare($this->query);
     $username = $contact1->getname();
@@ -123,5 +122,12 @@ public function getAllStaff()
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
+public function deleteCourse($id)
+    {
+        $this->query = "delete from courses where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":id", $id);
+        $statement->execute();
+    }
 }
 

@@ -3,6 +3,79 @@ body {
     background-color: rgb(228, 235, 237);
 }
 
+#leftList {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    background-color: rgb(10, 54, 105);
+}
+
+#leftlist ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 50px;
+    justify-content: space-around;
+}
+
+#leftlist li {
+    width: fit-content;
+    padding: 30px 0;
+}
+
+#leftList a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#leftList a:hover {
+    font-size: 22px;
+}
+
+
+/*----------- tables ------------*/
+
+.table {
+    width: 500px;
+    padding-left: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border-radius: 25px;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 20px;
+    border: 5px solid rgb(228, 235, 237);
+    background: rgb(27, 188, 154);
+    color: white;
+    border-radius: 15px;
+}
+
+.titles {
+    font-weight: bolder;
+}
+
+h2 {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+main {
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* 
 td {
     padding: 20px;
     border: 2px solid rgb(27, 188, 154);
@@ -32,4 +105,4 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
