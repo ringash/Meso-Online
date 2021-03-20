@@ -16,7 +16,8 @@ if (isset($_GET['id'])) {
 
 }}else{
 ?>
- <script>alert ("ju duhet te jeni te kycur fillimisht");</script>
+ <script>alert ("ju duhet te jeni te kycur fillimisht");
+ window.location.href = "../Views/login.php"</script>
  <?php 
- header('Location:../Views/login.php');}
+}
  ?>
