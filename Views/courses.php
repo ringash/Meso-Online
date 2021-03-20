@@ -36,6 +36,7 @@ include_once '../Logics/userData.php';
                 <div class="course-box">    
                 <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $course['courseimg'] ).'"/>'; ?>
                     <p> <?php echo $course['coursename']; ?></p>
+                    <p>preview</p>
                 </div>
             </a>
         <?php
