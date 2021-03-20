@@ -40,7 +40,7 @@ class userData extends DatabasePDOConfiguration
         $result = $statement->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
-    public function edit(\SimpleUser $user, $id)
+    public function editUsers(\SimpleUser $user, $id)
     {
         $this->query = "update usersinfo set username=:username where id=:id";
         var_dump($user);
@@ -140,6 +140,40 @@ class userData extends DatabasePDOConfiguration
     public function deleteStaff($id)
     {
         $this->query = "delete from staff where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":id", $id);
+        $statement->execute();
+    }
+    public function getStaffByID($staffId)
+    {
+        $this->query = "select * from staff where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":id", $staffId);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+    public function editStaffName(\Staff $staff, $id)
+    {
+        $this->query = "update staff set fullname=:fullname where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $fullname = $staff->getName();
+        $statement->bindParam(":fullname", $fullname);
+        $statement->bindParam(":id", $id);
+        $statement->execute();
+    }
+    public function editStaffPozita(\Staff $staff, $id)
+    {
+        $this->query = "update staff set pozita=:pozita where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $pozita = $staff->getPozita();
+        $statement->bindParam(":pozita", $pozita);
+        $statement->bindParam(":id", $id);
+        $statement->execute();
+    }
+    public function makeAdmin($id)
+    {
+        $this->query = "update usersinfo set role=1 where id=:id";
         $statement = $this->conn->prepare($this->query);
         $statement->bindParam(":id", $id);
         $statement->execute();
