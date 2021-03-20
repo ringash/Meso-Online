@@ -85,6 +85,7 @@ $staffList = $mapper3->getAllStaff();
                         <td>Email</td>
                         <td>Edit</td>
                         <td>Delete</td>
+                        <td>Make Admin</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -94,8 +95,9 @@ $staffList = $mapper3->getAllStaff();
                         <tr>
                             <td><?php echo $user['username']; ?></td>
                             <td><?php echo $user['email']; ?></td>
-                            <td><a href=<?php echo "edit.php?id=" . $user['id']; ?>>Modifiko</td>
+                            <td><a href=<?php echo "editUser.php?id=" . $user['id']; ?>>Modifiko</td>
                             <td><a href=<?php echo "../Logics/deleteUser.php?id=" . $user['id']; ?>>Fshij</td>
+                            <td><a href=<?php echo "../Logics/makeAdmin.php?id=" . $user['id']; ?>>Beje Admin</td>
                         </tr>
                     <?php
                     }
@@ -179,7 +181,7 @@ $staffList = $mapper3->getAllStaff();
                         <tr>
                             <td><?php echo $staff['fullname']; ?></td>
                             <td><?php echo $staff['pozita']; ?></td>
-                            <td><a href=<?php echo "edit.php?id=" . $staff['id']; ?>>Modifiko</td>
+                            <td><a href=<?php echo "editStaff.php?id=" . $staff['id']; ?>>Modifiko</td>
                             <td><a href=<?php echo "../Logics/deleteStaff.php?id=" . $staff['id']; ?>>Fshij</td>
                         </tr>
                     <?php

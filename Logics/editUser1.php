@@ -5,8 +5,8 @@ include_once 'simpleUser.php';
 if (isset($_GET['username']) && isset($_GET['username'])) {
     $userId = $_GET['id'];
     $username = $_GET['username'];
-    $simpleUser = new SimpleUser($username, "","",1 );
+    $simpleUser = new SimpleUser($username, "","",0 );
     $mapper = new userData();
-    $mapper->edit($simpleUser, $userId);
+    $mapper->editUsers($simpleUser, $userId);
     header("Location:../Views/settings.php");
 }
