@@ -36,10 +36,10 @@ $staffList = $mapper3->getAllStaff();
                 <li><a href="#" onclick="show(4)">- Stafi</a></li>
             </ul>
         </div>
-
+        <!-- KURSET -->
         <div class="table shown">
             <h2>Lista e Kurseve:</h2>
-            <table border="1">
+            <table>
                 <thead>
                     <tr class="titles">
                         <td>Emri i Kursit</td>
@@ -62,10 +62,10 @@ $staffList = $mapper3->getAllStaff();
                 </tbody>
             </table>
         </div>
-
+        <!-- USERS -->
         <div class="table hidden" id="userlist">
             <h2>User list:</h2>
-            <table border="1">
+            <table>
                 <thead>
                     <tr class="titles">
                         <td>Username</td>
@@ -90,6 +90,7 @@ $staffList = $mapper3->getAllStaff();
                 </tbody>
             </table>
         </div>
+        <!-- KONTAKTET -->
         <div class="table hidden">
             <h2>Kontaktet:</h2>
             <table>
@@ -119,6 +120,34 @@ $staffList = $mapper3->getAllStaff();
                 </tbody>
             </table>
         </div>
+        <!-- REVIEWS -->
+        <div class="table hidden">
+            <h2>Reviews:</h2>
+            <table>
+                <thead>
+                    <tr class="titles">
+                        <td>Username</td>
+                        <td>Komenti</td>
+                        <td>Delete</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <?php
+                    foreach ($staffList as $staff) {
+                    ?>
+                        <tr>
+                            <td><?php echo $staff['fullname']; ?></td>
+                            <td><?php echo $staff['pozita']; ?></td>
+                            <td><a href=<?php echo "edit.php?id=" . $user['id']; ?>>Modifiko</td>
+                            <td><a href=<?php echo "../Logics/deleteStaff.php?id=" . $user['id']; ?>>Fshij</td>
+                        </tr>
+                    <?php
+                    }
+                    ?> -->
+                </tbody>
+            </table>
+        </div>
+        <!-- STAFI -->
         <div class="table hidden">
             <h2>Stafi:</h2>
             <table>
@@ -137,8 +166,8 @@ $staffList = $mapper3->getAllStaff();
                         <tr>
                             <td><?php echo $staff['fullname']; ?></td>
                             <td><?php echo $staff['pozita']; ?></td>
-                            <td><a href=<?php echo "edit.php?id=" . $user['id']; ?>>Modifiko</td>
-                            <td><a href=<?php echo "../Logics/deleteStaff.php?id=" . $user['id']; ?>>Fshij</td>
+                            <td><a href=<?php echo "edit.php?id=" . $staff['id']; ?>>Modifiko</td>
+                            <td><a href=<?php echo "../Logics/deleteStaff.php?id=" . $staff['id']; ?>>Fshij</td>
                         </tr>
                     <?php
                     }
@@ -152,15 +181,3 @@ $staffList = $mapper3->getAllStaff();
         <?php include 'footer.php'; ?>
     </footer>
 </body>
-
-<!-- ?php
-                foreach ($staffList as $staff) {
-                ?>
-                    <li class="person">
-                    <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($staff['staff-photo']) . '"/>'; ?>
-                        <p class="team_name"><?php echo $staff['fullname']; ?></p>
-                        <p class="team_title"><?php echo $staff['pozita']; ?></p>
-                    </li>
-                    <?php
-
-                    ?> -->
