@@ -67,10 +67,14 @@ $staffList = $mapper3->getAllStaff();
                         <p>Emri i kursit:</p>
                         <input type="text" name="name" class="inpText" />
                     </div>
-                    <p>Shto foto:</p>
-                    <input type="file" name="image" />
-                    <p>Shto pdf:</p>
-                    <input type="file" name="pdf" />
+                    <div id="box2">
+                        <p>Shto foto:</p>
+                        <input type="file" name="image" />
+                    </div>
+                    <div id="box3">
+                        <p>Shto pdf:</p>
+                        <input type="file" name="pdf" />
+                    </div>
                     <button type="submit" name="addCourse-btn">Shto</button>
                 </form>
             </div>
