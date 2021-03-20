@@ -39,28 +39,41 @@ $staffList = $mapper3->getAllStaff();
         <!-- KURSET -->
         <div class="table shown">
             <h2>Lista e Kurseve:</h2>
-            <table>
-                <thead>
-                    <tr class="titles">
-                        <td>Emri i Kursit</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    foreach ($courseList as $course) {
-                    ?>
-                        <tr>
-                            <td><?php echo $course['coursename']; ?></td>
-                            <td><a href=<?php echo "edit.php?id=" . $course['id']; ?>>Modifiko</td>
-                            <td><a href=<?php echo "../Logics/deleteCourse.php?id=" . $course['id']; ?>>Fshij</td>
+            <div id="boxWithAddOpt">
+                <table>
+                    <thead>
+                        <tr class="titles">
+                            <td>Emri i Kursit</td>
+                            <td>Edit</td>
+                            <td>Delete</td>
                         </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach ($courseList as $course) {
+                        ?>
+                            <tr>
+                                <td><?php echo $course['coursename']; ?></td>
+                                <td><a href=<?php echo "edit.php?id=" . $course['id']; ?>>Modifiko</td>
+                                <td><a href=<?php echo "../Logics/deleteCourse.php?id=" . $course['id']; ?>>Fshij</td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                    </tbody>
+                </table>
+                <form method="post" enctype="multipart/form-data" id="addCourseForm">
+                    <div id="box1">
+                        <p>Emri i kursit:</p>
+                        <input type="text" name="name" class="inpText" />
+                    </div>
+                    <p>Shto foto:</p>
+                    <input type="file" name="image" />
+                    <p>Shto pdf:</p>
+                    <input type="file" name="pdf" />
+                    <button type="submit" name="addCourse-btn">Shto</button>
+                </form>
+            </div>
         </div>
         <!-- USERS -->
         <div class="table hidden" id="userlist">
@@ -133,8 +146,8 @@ $staffList = $mapper3->getAllStaff();
                 </thead>
                 <tbody>
                     <!-- <?php
-                    foreach ($staffList as $staff) {
-                    ?>
+                            foreach ($staffList as $staff) {
+                            ?>
                         <tr>
                             <td><?php echo $staff['fullname']; ?></td>
                             <td><?php echo $staff['pozita']; ?></td>
@@ -142,7 +155,7 @@ $staffList = $mapper3->getAllStaff();
                             <td><a href=<?php echo "../Logics/deleteStaff.php?id=" . $user['id']; ?>>Fshij</td>
                         </tr>
                     <?php
-                    }
+                            }
                     ?> -->
                 </tbody>
             </table>
