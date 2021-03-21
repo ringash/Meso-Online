@@ -39,7 +39,7 @@ $staffList = $mapper3->getAllStaff();
         <!-- KURSET -->
         <div class="table shown">
             <h2>Lista e Kurseve:</h2>
-            <div id="boxWithAddOpt">
+            <div class="boxWithAddOpt">
                 <table>
                     <thead>
                         <tr class="titles">
@@ -62,26 +62,26 @@ $staffList = $mapper3->getAllStaff();
                         ?>
                     </tbody>
                 </table>
-                <form method="post" enctype="multipart/form-data" id="addCourseForm">
-                    <div id="box1">
+                <form method="post" enctype="multipart/form-data" class="addForms">
+                    <div>
                         <p>Emri i kursit:</p>
                         <input type="text" name="name" class="inpText" />
                     </div>
-                    <div id="box2">
+                    <div>
                         <p>Shto foto:</p>
                         <input type="file" name="image" />
                     </div>
-                    <div id="box3">
+                    <div>
                         <p>Shto pdf:</p>
                         <input type="file" name="pdf" />
                     </div>
-                    <button type="submit" name="addCourse-btn">Shto</button>
+                    <button type="submit" name="addCourse-btn" class="addButtons">Shto</button>
                 </form>
             </div>
         </div>
         <!-- USERS -->
         <div class="table hidden" id="userlist">
-            <h2>User list:</h2>
+            <h2>Users:</h2>
             <table>
                 <thead>
                     <tr class="titles">
@@ -169,30 +169,47 @@ $staffList = $mapper3->getAllStaff();
         <!-- STAFI -->
         <div class="table hidden">
             <h2>Stafi:</h2>
-            <table>
-                <thead>
-                    <tr class="titles">
-                        <td>Emri dhe Mbiemri</td>
-                        <td>Pozita e punes</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    foreach ($staffList as $staff) {
-                    ?>
-                        <tr>
-                            <td><?php echo $staff['fullname']; ?></td>
-                            <td><?php echo $staff['pozita']; ?></td>
-                            <td><a href=<?php echo "editStaff.php?id=" . $staff['id']; ?>>Modifiko</td>
-                            <td><a href=<?php echo "../Logics/deleteStaff.php?id=" . $staff['id']; ?>>Fshij</td>
+            <div class="boxWithAddOpt">
+                <table>
+                    <thead>
+                        <tr class="titles">
+                            <td>Emri dhe Mbiemri</td>
+                            <td>Pozita e punes</td>
+                            <td>Edit</td>
+                            <td>Delete</td>
                         </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach ($staffList as $staff) {
+                        ?>
+                            <tr>
+                                <td><?php echo $staff['fullname']; ?></td>
+                                <td><?php echo $staff['pozita']; ?></td>
+                                <td><a href=<?php echo "editStaff.php?id=" . $staff['id']; ?>>Modifiko</td>
+                                <td><a href=<?php echo "../Logics/deleteStaff.php?id=" . $staff['id']; ?>>Fshij</td>
+                            </tr>
+                        <?php
+                        }
+                        ?>
+                    </tbody>
+                </table>
+                <form method="post" enctype="multipart/form-data" class="addForms">
+                    <div>
+                        <p>Emri i pun&#235torit:</p>
+                        <input type="text" name="text" class="inpText" />
+                    </div>
+                    <div>
+                        <p>Pozita:</p>
+                        <input type="file" name="text" />
+                    </div>
+                    <div>
+                        <p>Shto foto:</p>
+                        <input type="file" name="image" />
+                    </div>
+                    <button type="submit" name="addCourse-btn" class="addButtons">Shto</button>
+                </form>
+            </div>
         </div>
     </main>
     <script src="../js/settingsDivs.js"></script>
