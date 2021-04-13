@@ -66,7 +66,7 @@ $staffList = $mapper3->getAllStaff();
                     </tbody>
                 </table>
 
-                <form method="post" enctype="multipart/form-data" class="addForms">
+                <form method="post" enctype="multipart/form-data" class="addForms" action="../Logics/insertCourse.php">
                     <div>
                         <p>Emri i kursit:</p>
                         <input type="text" name="name" class="inpText" />
