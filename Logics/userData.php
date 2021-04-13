@@ -114,6 +114,7 @@ class userData extends DatabasePDOConfiguration
         $result = $statement->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+
     public function getAllStaff()
     {
         $this->query = "select * from staff";
@@ -122,6 +123,7 @@ class userData extends DatabasePDOConfiguration
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
+    
     public function deleteCourse($id)
     {
         $this->query = "delete from courses where id=:id";

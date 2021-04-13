@@ -8,6 +8,7 @@ $courseList = $mapper2->getAllCourses();
 
 $mapper =  new userData();
 $userList = $mapper->getAllUsers();
+
 $mapper1 =  new userData();
 $contactList = $mapper1->getAllContacts();
 
@@ -36,6 +37,8 @@ $staffList = $mapper3->getAllStaff();
                 <li><a href="#" onclick="show(4)">- Stafi</a></li>
             </ul>
         </div>
+
+
         <!-- KURSET -->
         <div class="table shown">
             <h2>Lista e Kurseve:</h2>
@@ -62,6 +65,22 @@ $staffList = $mapper3->getAllStaff();
                         ?>
                     </tbody>
                 </table>
+
+                <?php
+                $dbh = new PDO("mysql:host=localhost;dbname=mesoonline", "root", "");
+
+                if (isset($_POST['addCourse-btn'])) {
+                    $course_img = file_get_contents($_FILES['image']['tmp_name']);
+                    $course_pdf = file_get_contents($_FILES['pdf']['tmp_name']);
+
+                    $stmt = $dbh->prepare("insert into courses values('',?,?,?)");
+                    $stmt->bindParam(1, $POST['name']);
+                    $stmt->bindParam(2, $course_img);
+                    $stmt->bindParam(3, $course_pdf);
+                    $stmt->execute();
+                }
+                ?>
+
                 <form method="post" enctype="multipart/form-data" class="addForms">
                     <div>
                         <p>Emri i kursit:</p>
@@ -77,8 +96,11 @@ $staffList = $mapper3->getAllStaff();
                     </div>
                     <button type="submit" name="addCourse-btn" class="addButtons">Shto</button>
                 </form>
+
             </div>
         </div>
+
+
         <!-- USERS -->
         <div class="table hidden" id="userlist">
             <h2>Users:</h2>
@@ -109,6 +131,8 @@ $staffList = $mapper3->getAllStaff();
                 </tbody>
             </table>
         </div>
+
+
         <!-- KONTAKTET -->
         <div class="table hidden">
             <h2>Kontaktet:</h2>
@@ -139,6 +163,8 @@ $staffList = $mapper3->getAllStaff();
                 </tbody>
             </table>
         </div>
+
+
         <!-- REVIEWS -->
         <div class="table hidden">
             <h2>Reviews:</h2>

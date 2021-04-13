@@ -88,7 +88,7 @@
         <a href="#" onclick="show(0)">Kthehu n&#235 regjistrim</a>
     </div>
 
-    <!-- <script src="../js/register.js"></script> -->
+    <script src="../js/register.js"></script>
     <script src="../js/registerDivs.js"></script>
 </body>
 
