@@ -2,6 +2,13 @@
     height: 100vh;
 }
 
+div#myprofile {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding-top: 30px;
+}
+
 .welcome {
     display: flex;
     align-items: center;
@@ -13,12 +20,7 @@ h1 {
     font-weight: 100;
     font-family: "Convergence";
     color: rgb(39, 48, 148);
-}
-
-#changePass {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    margin-bottom: 20px;
 }
 
 .input1 {
@@ -26,11 +28,11 @@ h1 {
 }
 
 input.input1 {
-    width: 100%;
+    width: 60%;
     height: 30px;
     border: none;
     border-radius: 25px;
-    padding: 0 30px;
+    padding: 0px 50px;
 }
 
 input.input1:focus {
@@ -56,4 +58,55 @@ input.input1:focus {
     font-size: 15px;
     font-weight: bold;
     color: white;
+}
+
+tr {
+    height: 40px;
+}
+
+div#changePass {
+    width: 27%;
+    border: 1px solid rgb(27, 188, 154);
+    border-radius: 5%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-message {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100px;
+    width: 70%;
+    border: none;
+    border-radius: 25px;
+    resize: none;
+    padding: 15px 30px 0 30px;
+    font-family: sans-serif;
+}
+
+.write {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin-bottom: 25px;
+}
+
+#review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(27, 188, 154);
+    border-radius: 5%;
+    padding: 10px;
 }

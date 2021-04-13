@@ -12,3 +12,4 @@ if (isset($_GET['fullname']) && isset($_GET['pozita'])) {
     $mapper->editStaffPozita($staff, $staffId);
     header("Location:../Views/settings.php");
 }
+?>
