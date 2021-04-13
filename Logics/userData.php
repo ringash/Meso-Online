@@ -180,7 +180,6 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(":id", $id);
         $statement->execute();
     }
-<<<<<<< HEAD
 
     public function insertStaff(\Staff $staff)
     {
@@ -204,6 +203,3 @@ class userData extends DatabasePDOConfiguration
         return $result;
     }
 }
-=======
-}
->>>>>>> 4d7884145e242fc709c723c09e168bfa612692ae
