@@ -66,21 +66,6 @@ $staffList = $mapper3->getAllStaff();
                     </tbody>
                 </table>
 
-                <?php
-                $dbh = new PDO("mysql:host=localhost;dbname=mesoonline", "root", "");
-
-                if (isset($_POST['addCourse-btn'])) {
-                    $course_img = file_get_contents($_FILES['image']['tmp_name']);
-                    $course_pdf = file_get_contents($_FILES['pdf']['tmp_name']);
-
-                    $stmt = $dbh->prepare("insert into courses values('',?,?,?)");
-                    $stmt->bindParam(1, $POST['name']);
-                    $stmt->bindParam(2, $course_img);
-                    $stmt->bindParam(3, $course_pdf);
-                    $stmt->execute();
-                }
-                ?>
-
                 <form method="post" enctype="multipart/form-data" class="addForms">
                     <div>
                         <p>Emri i kursit:</p>
