@@ -7,7 +7,6 @@ session_start();
 if (isset($_POST['contact-submit'])) {
     $contact = new Contact($_POST);
     $contact->insertContact();
-    echo 'sukses!!!';
 }
 class Contact
 {

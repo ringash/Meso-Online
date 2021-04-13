@@ -16,9 +16,10 @@ session_start();
 </head>
 <?php
 include_once '../Logics/userData.php';
- $mapper2 =  new userData();
- $courseList = $mapper2->getAllCourses();
- ?>
+$mapper2 =  new userData();
+$courseList = $mapper2->getAllCourses();
+?>
+
 <body>
     <header>
         <?php include 'header.php'; ?>
@@ -27,21 +28,21 @@ include_once '../Logics/userData.php';
         <div id="title">
             <p>&#199far&#235 do t&#235 m&#235sosh?</p>
         </div>
-        
+
         <div id="types-of-courses">
-        <?php
+            <?php
             foreach ($courseList as $course) {
-        ?>
-            <a href=<?php echo "../Logics/pdf.php?id=" . $course['id']; ?>>
-                <div class="course-box">    
-                <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $course['courseimg'] ).'"/>'; ?>
-                    <p> <?php echo $course['coursename']; ?></p>
-                    <p>preview</p>
-                </div>
-            </a>
-        <?php
+            ?>
+                <a href=<?php echo "../Logics/pdf.php?id=" . $course['id']; ?>>
+                    <div class="course-box">
+                        <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($course['courseimg']) . '"/>'; ?>
+                        <p> <?php echo $course['coursename']; ?></p>
+                        <p>preview</p>
+                    </div>
+                </a>
+            <?php
             }
-        ?>
+            ?>
         </div>
     </div>
     <footer>
