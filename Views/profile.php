@@ -1,5 +1,11 @@
 <?php
 session_start();
+include_once '../Logics/userData.php';
+if (isset($_GET['id'])) {
+    $userId = $_GET['id'];
+    $mapper = new userData();
+    $user = $mapper->getUserByID($userId);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,6 +20,7 @@ session_start();
     <link rel="stylesheet" href="../css/main-style.css" />
     <link rel="stylesheet" href="../css/courses-style.css" />
     <link rel="stylesheet" href="../css/profile-style.css" />
+   
 </head>
 
 <body>
@@ -21,11 +28,36 @@ session_start();
         <?php include 'header.php'; ?>
     </header>
     <div id="myprofile">
-    <div class="welcome">
-    <h1>Welcome Back <?php echo $_SESSION['username'];?> </h1>
+        <div class="welcome">
+            <h1>Welcome Back <?php echo $_SESSION['username']; ?> </h1>
+        </div>
+       
+        
+        <div id="changePass">
+             <h1>Change Password</h1>
+            <form method="POST" action="passwordChange.php">
+                <table>
+                    <tr>
+                        <td>Enter your UserName</td>
+                        <td><input type="username" size="10" name="username" class="input1"></td>
+                    </tr>
+                    <tr>
+                        <td>Enter your existing password:</td>
+                        <td><input type="password" size="10" name="password" class="input1"></td>
+                    </tr>
+                    <tr>
+                        <td>Enter your new password:</td>
+                        <td><input type="password" size="10" name="newpassword" class="input1"></td>
+                    </tr>
+                    <tr>
+                        <td>Re-enter your new password:</td>
+                        <td><input type="password" size="10" name="confirmnewpassword" class="input1"></td>
+                    </tr>
+                </table>
+                <p><input type="submit" value="Update Password" id="submit">
+            </form>
+        </div>
     </div>
-    </div>
-
     <footer>
         <?php include 'footer.php'; ?>
     </footer>

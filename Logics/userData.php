@@ -199,14 +199,14 @@ class userData extends DatabasePDOConfiguration
 
     public function insertStaff(\Staff $staff)
     {
-        $this->query = "insert into staff (staff-photo,fullname,pozita) values (:staff-photo,:fullname,:pozita)";
+        $this->query = "insert into staff values ('',?,?,?)";
         $statement = $this->conn->prepare($this->query);
         $staffPhoto = $staff->getPhoto();
         $fullname = $staff->getName();
         $pozita = $staff->getPozita();
-        $statement->bindParam(":staff-photo", $staffPhoto);
-        $statement->bindParam(":fullname", $fullname);
-        $statement->bindParam(":pozita", $pozita);
+        $statement->bindParam(1, $staffPhoto);
+        $statement->bindParam(2, $fullname);
+        $statement->bindParam(3, $pozita);
         $statement->execute();
     } 
     public function makeAdmin($id)

@@ -6,8 +6,8 @@ if (isset($_GET['id'])) {
     $courseId = $_GET['id'];
     $mapper = new userData();
     $course = $mapper->getCourseByID($courseId);
-    $file=$course['courseFile'];
-    $filename='pdfs/'.$course['courseFile'];
+    $file='pdfs/'.$course['coursefile'];
+    $filename='pdfs/'.$course['coursefile'];
     header('Content-type:application/pdf');
     header('Content-disposition: inline; filename="' . $filename . '"');
     header('Content-Transfer-Encoding: binary');
