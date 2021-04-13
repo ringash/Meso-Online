@@ -34,6 +34,6 @@ class Register
         $user = new SimpleUser($this->username,$this->email , $this->password, 0);
         $mapper = new UserData();
         $mapper->insertUser($user);
-        header("Location:../Views/index.php");
+       header("Location:../Views/index.php");
     }
 }

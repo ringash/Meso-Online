@@ -12,6 +12,7 @@ class SimpleUser extends User
     {
         $_SESSION["role"] = "0";
         $_SESSION['roleName'] = "SimpleUser";
+        $_SESSION['username'] = $this->username;
     }
 
 

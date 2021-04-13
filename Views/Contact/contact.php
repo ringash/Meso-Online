@@ -43,7 +43,7 @@ session_start();
             <?php } ?>
         </div>
     </header>
-    <form id="contact" method="post" action="contactClass.php" onsubmit="return validate()">
+    <form id="contact" method="post" action="contactClass.php" onsubmit="return validateContact()">
         <div id="contact-pic">
             <img src="../../images/contact/img-01.png" alt="IMG">
         </div>

@@ -19,7 +19,7 @@
         ?>
     </header>
 
-    <form class="register forma shown" id="register-form" action="RegisterVerify.php" method="post" onsubmit="return validate()">
+    <form class="register forma shown" id="register-form" action="RegisterVerify.php" method="post" onsubmit="return validateRegister()">
         <div id="user-img">
             <img alt="user" src="../images/login/user.png" />
         </div>
@@ -88,7 +88,7 @@
         <a href="#" onclick="show(0)">Kthehu n&#235 regjistrim</a>
     </div>
 
-    <!-- <script src="../js/register.js"></script> -->
+    <script src="../js/register.js"></script>
     <script src="../js/registerDivs.js"></script>
 </body>
 

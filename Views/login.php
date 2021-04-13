@@ -18,7 +18,7 @@
     <?php include 'header.php';
     ?>
 </header>
-    <form id="login-form" action="LoginVerify.php" method="post" onsubmit="return validate()">
+    <form id="login-form" action="LoginVerify.php" method="post" onsubmit="return validateLogin()">
         <div id="user-img">
             <img alt="user" src="../images/login/user.png" />
         </div>
@@ -37,8 +37,8 @@
             <a href="register.php">Nuk ke account?</a>
         </div>
     </form>
-<!-- 
-    <script src="../js/login.js"></script> -->
+
+    <script src="../js/login.js"></script> 
 </body>
 
 </html>

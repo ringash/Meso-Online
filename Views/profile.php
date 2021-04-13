@@ -13,13 +13,19 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;900&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main-style.css" />
     <link rel="stylesheet" href="../css/courses-style.css" />
+    <link rel="stylesheet" href="../css/profile-style.css" />
 </head>
 
 <body>
     <header>
         <?php include 'header.php'; ?>
     </header>
-    
+    <div id="myprofile">
+    <div class="welcome">
+    <h1>Welcome Back <?php echo $_SESSION['username'];?> </h1>
+    </div>
+    </div>
+
     <footer>
         <?php include 'footer.php'; ?>
     </footer>

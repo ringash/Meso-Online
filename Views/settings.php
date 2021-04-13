@@ -1,6 +1,7 @@
 <?php
 include_once '../Logics/userData.php';
 include_once '../Logics/adminUser.php';
+include '../Logics/editUser1.php';
 session_start();
 
 $mapper2 =  new userData();
@@ -99,15 +100,26 @@ $staffList = $mapper3->getAllStaff();
                         <tr>
                             <td><?php echo $user['username']; ?></td>
                             <td><?php echo $user['email']; ?></td>
-                            <td><a href=<?php echo "editUser.php?id=" . $user['id']; ?>>Modifiko</td>
+                            <td><a href=<?php echo "editUser.php?id=" . $user['id']; ?>>Modifiko</a> Modified by: 
+                            </td>
                             <td><a href=<?php echo "../Logics/deleteUser.php?id=" . $user['id']; ?>>Fshij</td>
                             <td><a href=<?php echo "../Logics/makeAdmin.php?id=" . $user['id']; ?>>Beje Admin</td>
                         </tr>
+                       
+                        
                     <?php
-                    }
+                    }if(isset($_GET['edit-btn'])){
+                        $info="Modified by: ".$_SESSION['username'];
+                        echo "test ";
+                        }else{
+                         $info="not modified";
+                        } 
+                        var_dump($info); 
+                    echo $info;
                     ?>
                 </tbody>
             </table>
+
         </div>
         <!-- KONTAKTET -->
         <div class="table hidden">
@@ -194,20 +206,20 @@ $staffList = $mapper3->getAllStaff();
                         ?>
                     </tbody>
                 </table>
-                <form method="post" enctype="multipart/form-data" class="addForms">
+                <form method="post" action="../Logics/insertStaff.php" enctype="multipart/form-data" class="addForms">
                     <div>
                         <p>Emri i pun&#235torit:</p>
-                        <input type="text" name="text" class="inpText" />
+                        <input type="text" name="fullname" class="inpText" />
                     </div>
                     <div>
                         <p>Pozita:</p>
-                        <input type="file" name="text" />
+                        <input type="text" name="pozita" class="inpText" />
                     </div>
                     <div>
                         <p>Shto foto:</p>
-                        <input type="file" name="image" />
+                        <input type="file" name="staffPhoto" />
                     </div>
-                    <button type="submit" name="addCourse-btn" class="addButtons">Shto</button>
+                    <button type="submit" name="addStaff-btn" class="addButtons">Shto</button>
                 </form>
             </div>
         </div>

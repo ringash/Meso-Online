@@ -178,4 +178,26 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(":id", $id);
         $statement->execute();
     }
+
+    public function insertStaff(\Staff $staff)
+    {
+        $this->query = "insert into staff (staff-photo,fullname,pozita) values (:staff-photo,:fullname,:pozita)";
+        $statement = $this->conn->prepare($this->query);
+        $staffPhoto = $staff->getPhoto();
+        $fullname = $staff->getName();
+        $pozita = $staff->getPozita();
+        $statement->bindParam(":staff-photo", $staffPhoto);
+        $statement->bindParam(":fullname", $fullname);
+        $statement->bindParam(":pozita", $pozita);
+        $statement->execute();
+    }
+    public function getUsername($username)
+    {
+        $this->query = "select username from usersinfo where username=:username";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":username", $username);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }

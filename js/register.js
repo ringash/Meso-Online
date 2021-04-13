@@ -1,25 +1,30 @@
-document.getElementById('submit').addEventListener("click", function(event) {
-    event.preventDefault();
-    validate();
-})
+function validateRegister() {
+    var inputList = document.getElementsByClassName("input1");
 
-function validate() {
-//register-form
-    if (inputList[0].value == "" && inputList[1].value == "" &&
-        inputList[2].value == "" && inputList[3].value == "") {
-        alert('Nuk jane te mbushura te dhenat!');
+    if (
+        inputList[0].value == "" &&
+        inputList[1].value == "" &&
+        inputList[2].value == "" &&
+        inputList[3].value == ""
+    ) {
+        alert("Nuk jane te mbushura te dhenat!");
+        return false;
     } else if (inputList[0].value == "") {
-        alert('Shenoni Username');
+        alert("Shenoni Username");
+        return false;
     } else if (inputList[1].value == "") {
-        alert('Shenoni Email');
+        alert("Shenoni Email");
+        return false;
     } else if (inputList[2].value == "") {
-        alert('Shenoni Password');
+        alert("Shenoni Password");
+        return false;
     } else if (inputList[3].value == "") {
-        alert('Shenoni Confirm Password');
+        alert("Shenoni Confirm Password");
+        return false;
     } else if (inputList[2].value != inputList[3].value) {
-        alert('Password dhe Confirm Password nuk jane te njejte!');
+        alert("Password dhe Confirm Password nuk jane te njejte!");
+        return false;
+    } else {
+        return true;
     }
-//  else {
-//     alert('Regjistrimi u be me sukses!');
-// }
 }

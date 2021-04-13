@@ -14,6 +14,7 @@ class AdminUser extends User
     {
         $_SESSION["role"] = 1;
         $_SESSION['roleName'] = "Administrator";
+        $_SESSION['username'] = $this->username;
     }
 
     public function getUsername()

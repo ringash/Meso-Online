@@ -29,7 +29,7 @@ if (isset($_GET['id'])) {
             <label for="">Name:</label>
             <input type="text" name='username' class="input" placeholder="username..." value=<?php echo $user['username']; ?> />
             
-            <input id="submit" type="submit" name='login-btn' class="input submit" value="Edit" />
+            <input id="submit" type="submit" name='edit-btn' class="input submit" value="Edit" />
         </div>
     </form>
 </div>
