@@ -183,13 +183,7 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(":id", $id);
         $statement->execute();
     }
-    public function makeAdmin($id)
-    {
-        $this->query = "update usersinfo set role=1 where id=:id";
-        $statement = $this->conn->prepare($this->query);
-        $statement->bindParam(":id", $id);
-        $statement->execute();
-    }
+   
 
     public function insertStaff(\Staff $staff)
     {
@@ -201,6 +195,13 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(":staff-photo", $staffPhoto);
         $statement->bindParam(":fullname", $fullname);
         $statement->bindParam(":pozita", $pozita);
+        $statement->execute();
+    } 
+    public function makeAdmin($id)
+    {
+        $this->query = "update usersinfo set role=1 where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":id", $id);
         $statement->execute();
     }
     public function getUsername($username)
