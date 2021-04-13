@@ -33,7 +33,7 @@ $courseList = $mapper2->getAllCourses();
             <?php
             foreach ($courseList as $course) {
             ?>
-                <a target="_blank" href="../Logics/pdf.php?id=<?php echo $course['id']; ?>">
+                <a target="_blank" href="../Logics/pdfShow.php?id=<?php echo $course['id']; ?>">
                     <div class="course-box">
                         <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($course['courseimg']) . '"/>'; ?>
                         <p> <?php echo $course['coursename']; ?></p>
