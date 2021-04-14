@@ -235,7 +235,7 @@ class userData extends DatabasePDOConfiguration
     }
     public function insertReview(\Review $review)
     {
-        $this->query = "insert into reviews values ('',?,?)";
+        $this->query = "insert into reviews values ('',?,?,'')";
         $statement = $this->conn->prepare($this->query);
         $name = $review->getName();
         $reviewMessage = $review->getReview();
@@ -255,6 +255,14 @@ class userData extends DatabasePDOConfiguration
     public function publishReview($id)
     {
         $this->query = "update reviews set active=1 where id=?";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindparam(1, $id);
+        $statement->execute();
+    }
+
+    public function depublishReview($id)
+    {
+        $this->query = "update reviews set active=0 where id=?";
         $statement = $this->conn->prepare($this->query);
         $statement->bindparam(1, $id);
         $statement->execute();

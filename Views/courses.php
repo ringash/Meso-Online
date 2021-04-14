@@ -37,7 +37,7 @@ $courseList = $mapper2->getAllCourses();
                     <div class="course-box">
                         <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($course['courseimg']) . '"/>'; ?>
                         <p> <?php echo $course['coursename']; ?></p>
-                        <p>preview</p>
+                        <p><?php echo $course['creator']; ?></p>
                     </div>
                 </a>
             <?php

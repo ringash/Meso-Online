@@ -50,8 +50,7 @@ $reviewList = $mapper3->getAllReviews();
                     <thead>
                         <tr class="titles">
                             <td>Emri i Kursit</td>
-                            <td>Edit</td>
-                            <td>Delete</td>
+                            <td>Shtuar nga</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,6 +59,7 @@ $reviewList = $mapper3->getAllReviews();
                         ?>
                             <tr>
                                 <td><?php echo $course['coursename']; ?></td>
+                                <td><?php echo $course['creator']; ?></td>
                                 <td><a href=<?php echo "edit.php?id=" . $course['id']; ?>>Modifiko</td>
                                 <td><a href=<?php echo "../Logics/deleteCourse.php?id=" . $course['id']; ?>>Fshij</td>
                             </tr>
@@ -97,9 +97,6 @@ $reviewList = $mapper3->getAllReviews();
                     <tr class="titles">
                         <td>Username</td>
                         <td>Email</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
-                        <td>Make Admin</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -109,23 +106,13 @@ $reviewList = $mapper3->getAllReviews();
                         <tr>
                             <td><?php echo $user['username']; ?></td>
                             <td><?php echo $user['email']; ?></td>
-                            <td><a href=<?php echo "editUser.php?id=" . $user['id']; ?>>Modifiko</a> Modified by:
+                            <td><a href=<?php echo "editUser.php?id=" . $user['id']; ?>>Modifiko</a></td>
                             </td>
                             <td><a href=<?php echo "../Logics/deleteUser.php?id=" . $user['id']; ?>>Fshij</td>
                             <td><a href=<?php echo "../Logics/makeAdmin.php?id=" . $user['id']; ?>>Beje Admin</td>
                         </tr>
-
-
                     <?php
                     }
-                    if (isset($_GET['edit-btn'])) {
-                        $info = "Modified by: " . $_SESSION['username'];
-                        echo "test ";
-                    } else {
-                        $info = "not modified";
-                    }
-                    var_dump($info);
-                    echo $info;
                     ?>
                 </tbody>
             </table>
@@ -139,11 +126,10 @@ $reviewList = $mapper3->getAllReviews();
             <table>
                 <thead>
                     <tr class="titles">
-                        <td>name</td>
+                        <td>Emri</td>
                         <td>Email</td>
-                        <td>subject</td>
-                        <td>mesazhi</td>
-                        <td>Delete</td>
+                        <td>Titulli</td>
+                        <td>Mesazhi</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -173,7 +159,6 @@ $reviewList = $mapper3->getAllReviews();
                     <tr class="titles">
                         <td>Username</td>
                         <td>Komenti</td>
-                        <td>Delete</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -184,7 +169,19 @@ $reviewList = $mapper3->getAllReviews();
                             <td><?php echo $review['name']; ?></td>
                             <td><?php echo $review['review']; ?></td>
                             <td><a href=<?php echo "../Logics/deleteReview.php?id=" . $review['id']; ?>>Fshij</td>
-                            <td><a href=<?php echo "../Logics/publishReview.php?id=" . $review['id']; ?>>Publiko</td>
+
+                            <?php
+                            if ($review['active'] == 1) {
+                            ?>
+                                <td><a href=<?php echo "../Logics/depublishReview.php?id=" . $review['id']; ?>>Hjeke</td>
+                            <?php
+                            } else if ($review['active'] == 0) {
+                            ?>
+                                <td><a href=<?php echo "../Logics/publishReview.php?id=" . $review['id']; ?>>Publiko</td>
+                            <?php
+                            }
+                            ?>
+
                         </tr>
                     <?php
                     }
@@ -192,6 +189,8 @@ $reviewList = $mapper3->getAllReviews();
                 </tbody>
             </table>
         </div>
+
+
         <!-- STAFI -->
         <div class="table hidden">
             <h2>Stafi:</h2>
@@ -201,8 +200,6 @@ $reviewList = $mapper3->getAllReviews();
                         <tr class="titles">
                             <td>Emri dhe Mbiemri</td>
                             <td>Pozita e punes</td>
-                            <td>Edit</td>
-                            <td>Delete</td>
                         </tr>
                     </thead>
                     <tbody>
