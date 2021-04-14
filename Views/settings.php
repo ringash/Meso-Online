@@ -109,21 +109,22 @@ $reviewList = $mapper3->getAllReviews();
                         <tr>
                             <td><?php echo $user['username']; ?></td>
                             <td><?php echo $user['email']; ?></td>
-                            <td><a href=<?php echo "editUser.php?id=" . $user['id']; ?>>Modifiko</a> Modified by: 
+                            <td><a href=<?php echo "editUser.php?id=" . $user['id']; ?>>Modifiko</a> Modified by:
                             </td>
                             <td><a href=<?php echo "../Logics/deleteUser.php?id=" . $user['id']; ?>>Fshij</td>
                             <td><a href=<?php echo "../Logics/makeAdmin.php?id=" . $user['id']; ?>>Beje Admin</td>
                         </tr>
-                       
-                        
+
+
                     <?php
-                    }if(isset($_GET['edit-btn'])){
-                        $info="Modified by: ".$_SESSION['username'];
+                    }
+                    if (isset($_GET['edit-btn'])) {
+                        $info = "Modified by: " . $_SESSION['username'];
                         echo "test ";
-                        }else{
-                         $info="not modified";
-                        } 
-                        var_dump($info); 
+                    } else {
+                        $info = "not modified";
+                    }
+                    var_dump($info);
                     echo $info;
                     ?>
                 </tbody>
@@ -177,15 +178,16 @@ $reviewList = $mapper3->getAllReviews();
                 </thead>
                 <tbody>
                     <?php
-                            foreach ($reviewList as $review) {
-                            ?>
+                    foreach ($reviewList as $review) {
+                    ?>
                         <tr>
                             <td><?php echo $review['name']; ?></td>
                             <td><?php echo $review['review']; ?></td>
                             <td><a href=<?php echo "../Logics/deleteReview.php?id=" . $review['id']; ?>>Fshij</td>
+                            <td><a href=<?php echo "../Logics/publishReview.php?id=" . $review['id']; ?>>Publiko</td>
                         </tr>
                     <?php
-                            }
+                    }
                     ?>
                 </tbody>
             </table>

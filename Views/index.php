@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -12,12 +12,17 @@ session_start();
     <link href='https://fonts.googleapis.com/css?family=Convergence' rel='stylesheet'>
     <link rel="stylesheet" href="../css/index-style.css" />
 </head>
+<?php
+include '../Logics/userData.php';
+$mapper = new userData();
+$reviews = $mapper->getReviewsForIndex();
+?>
 
 <body>
-<header>
-    <?php include 'header.php';
-    ?>
-</header>
+    <header>
+        <?php include 'header.php';
+        ?>
+    </header>
     <div id="bck-img">
     </div>
     <div id="welcome">
@@ -30,45 +35,21 @@ session_start();
             <p>&#199far&#235 thon&#235 t&#235 tjer&#235t p&#235r ne?</p>
         </div>
         <div id="reviews">
-            <div class="review">
-                <div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem numquam tempore doloribus dolorum accusamus placeat, maxime voluptatem officia rerum eum saepe sint dignissimos sed sunt voluptatibus cupiditate hic ut mollitia.</p>
-                </div>
-                <div id="person">
-                    <div class="review-img">
-                        <img alt="profile" src="../images/index/no-profile.png" />
+            <?php
+            foreach ($reviews as $review) {
+            ?><div class="review">
+                    <div>
+                        <p><?php echo $review['review'] ?></p>
                     </div>
-                    <div id="name">
-                        <p>Emri Mbiemri</p>
-                    </div>
-                </div>
-            </div>
-            <div class="review">
-                <div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem numquam tempore doloribus dolorum accusamus placeat, maxime voluptatem officia rerum eum saepe sint dignissimos sed sunt voluptatibus cupiditate hic ut mollitia.</p>
-                </div>
-                <div id="person">
-                    <div class="review-img">
-                        <img alt="profile" src="../images/index/no-profile.png" />
-                    </div>
-                    <div id="name">
-                        <p>Emri Mbiemri</p>
+                    <div id="person">
+                        <div id="name">
+                            <p><?php echo $review['name'] ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="review">
-                <div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem numquam tempore doloribus dolorum accusamus placeat, maxime voluptatem officia rerum eum saepe sint dignissimos sed sunt voluptatibus cupiditate hic ut mollitia.</p>
-                </div>
-                <div id="person">
-                    <div class="review-img">
-                        <img alt="profile" src="../images/index/no-profile.png" />
-                    </div>
-                    <div id="name">
-                        <p>Emri Mbiemri</p>
-                    </div>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
     <footer>

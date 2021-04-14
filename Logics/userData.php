@@ -68,7 +68,7 @@ class userData extends DatabasePDOConfiguration
     public function changePass(\SimpleUser $user, $username)
     {
         $this->query = "update usersinfo set pass=:pass where username=:username";
-        
+
         $statement = $this->conn->prepare($this->query);
         $pass = password_hash($user->getPassword(), PASSWORD_BCRYPT);
         $statement->bindParam(":pass", $pass);
@@ -202,7 +202,7 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(":id", $id);
         $statement->execute();
     }
-   
+
 
     public function insertStaff(\Staff $staff)
     {
@@ -215,7 +215,7 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(2, $fullname);
         $statement->bindParam(3, $pozita);
         $statement->execute();
-    } 
+    }
     public function makeAdmin($id)
     {
         $this->query = "update usersinfo set role=1 where id=:id";
@@ -245,6 +245,22 @@ class userData extends DatabasePDOConfiguration
     public function getAllReviews()
     {
         $this->query = "select * from reviews";
+        $statement = $this->conn->prepare($this->query);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function publishReview($id)
+    {
+        $this->query = "update reviews set active=1 where id=?";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindparam(1, $id);
+        $statement->execute();
+    }
+
+    public function getReviewsForIndex(){
+        $this->query = "select * from reviews where active=1";
         $statement = $this->conn->prepare($this->query);
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
