@@ -13,14 +13,14 @@ if (isset($_POST['addStaff-btn'])) {
 }
 class insertStaff
 {
-    //private $staffPhoto;
+   private $staffPhoto;
     private $fullname;
     private $pozita;
 
 
     public function __construct($formsData)
     {
-        //$this->staffPhoto = file_get_contents($_FILES['staffPhoto']['tmp_name']);
+        $this->staffPhoto = file_get_contents($_FILES['staffPhoto']['tmp_name']);
         $this->fullname= $formsData['fullname'];
         $this->pozita = $formsData['pozita'];
     }
@@ -28,14 +28,13 @@ class insertStaff
 
     public function insert()
     {
-        echo"bravo";
-        $img=file_get_contents($_FILES['staffPhoto']['tmp_name']);
-        $staff1 = new Staff($img,$this->fullname , $this->pozita);
-        //var_dump($staff1);
+       
+        //$img=file_get_contents($_FILES['staffPhoto']['tmp_name']);
+        $staff1 = new Staff($this->staffPhoto,$this->fullname , $this->pozita);
+         //var_dump($staff1);
         $mapper = new UserData();
         $mapper->insertStaff($staff1);
 
-        echo"fund";
         header("Location:../Views/settings.php");
     }
 }

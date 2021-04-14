@@ -142,15 +142,16 @@ class userData extends DatabasePDOConfiguration
         $statement->execute();
     }
 
-    public function insertCourse($name, $img, $pdf, $pdfType, $pdfName)
+    public function insertCourse($name, $img, $pdf, $pdfType, $pdfName, $creator)
     {
-        $this->query = "insert into courses values('',?,?,?,?,?)";
+        $this->query = "insert into courses values('',?,?,?,?,?,?)";
         $statement = $this->conn->prepare($this->query);
         $statement->bindParam(1, $name);
         $statement->bindParam(2, $img);
         $statement->bindParam(3, $pdf);
         $statement->bindParam(4, $pdfType);
         $statement->bindParam(5, $pdfName);
+        $statement->bindParam(6, $creator);
         $statement->execute();
     }
 
