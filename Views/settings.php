@@ -13,9 +13,11 @@ $userList = $mapper->getAllUsers();
 $mapper1 =  new userData();
 $contactList = $mapper1->getAllContacts();
 
-include_once '../Logics/userData.php';
 $mapper3 =  new userData();
 $staffList = $mapper3->getAllStaff();
+//include_once '../Logics/userData.php';
+$mapper3 =  new userData();
+$reviewList = $mapper3->getAllReviews();
 
 ?>
 
@@ -174,18 +176,17 @@ $staffList = $mapper3->getAllStaff();
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <?php
-                            foreach ($staffList as $staff) {
+                    <?php
+                            foreach ($reviewList as $review) {
                             ?>
                         <tr>
-                            <td><?php echo $staff['fullname']; ?></td>
-                            <td><?php echo $staff['pozita']; ?></td>
-                            <td><a href=<?php echo "edit.php?id=" . $user['id']; ?>>Modifiko</td>
-                            <td><a href=<?php echo "../Logics/deleteStaff.php?id=" . $user['id']; ?>>Fshij</td>
+                            <td><?php echo $review['name']; ?></td>
+                            <td><?php echo $review['review']; ?></td>
+                            <td><a href=<?php echo "../Logics/deleteReview.php?id=" . $review['id']; ?>>Fshij</td>
                         </tr>
                     <?php
                             }
-                    ?> -->
+                    ?>
                 </tbody>
             </table>
         </div>

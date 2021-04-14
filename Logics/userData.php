@@ -65,6 +65,16 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(":role", $role);
         $statement->execute();
     }
+    public function changePass(\SimpleUser $user, $username)
+    {
+        $this->query = "update usersinfo set pass=:pass where username=:username";
+        
+        $statement = $this->conn->prepare($this->query);
+        $pass = password_hash($user->getPassword(), PASSWORD_BCRYPT);
+        $statement->bindParam(":pass", $pass);
+        $statement->bindParam(":username", $username);
+        $statement->execute();
+    }
 
     public function deleteUser($id)
     {
@@ -158,6 +168,13 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(":id", $id);
         $statement->execute();
     }
+    public function deleteReview($id)
+    {
+        $this->query = "delete from reviews where id=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":id", $id);
+        $statement->execute();
+    }
     public function getStaffByID($staffId)
     {
         $this->query = "select * from staff where id=:id";
@@ -213,6 +230,24 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(":username", $username);
         $statement->execute();
         $result = $statement->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+    public function insertReview(\Review $review)
+    {
+        $this->query = "insert into reviews values ('',?,?)";
+        $statement = $this->conn->prepare($this->query);
+        $name = $review->getName();
+        $reviewMessage = $review->getReview();
+        $statement->bindParam(1, $name);
+        $statement->bindParam(2, $reviewMessage);
+        $statement->execute();
+    }
+    public function getAllReviews()
+    {
+        $this->query = "select * from reviews";
+        $statement = $this->conn->prepare($this->query);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
 }

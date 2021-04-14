@@ -35,27 +35,41 @@ if (isset($_GET['id'])) {
         
         <div id="changePass">
              <h1>Change Password</h1>
-            <form method="POST" action="passwordChange.php">
+            <form method="GET" action="../Logics/passwordChange.php">
                 <table>
                     <tr>
-                        <td>Enter your UserName</td>
-                        <td><input type="username" size="10" name="username" class="input1"></td>
+                        <td><input type="username" size="10" name="username1" class="input1" placeholder="Username..."></td>
                     </tr>
                     <tr>
-                        <td>Enter your existing password:</td>
-                        <td><input type="password" size="10" name="password" class="input1"></td>
+                        <td><input type="password" size="10" name="password" class="input1" placeholder="Password..."></td>
                     </tr>
                     <tr>
-                        <td>Enter your new password:</td>
-                        <td><input type="password" size="10" name="newpassword" class="input1"></td>
+                        <td><input type="password" size="10" name="newpassword" class="input1" placeholder="New password..."></td>
                     </tr>
                     <tr>
-                        <td>Re-enter your new password:</td>
-                        <td><input type="password" size="10" name="confirmnewpassword" class="input1"></td>
+                        <td><input type="password" size="10" name="confirmnewpassword" class="input1" placeholder="Confirm password..."></td>
                     </tr>
                 </table>
                 <p><input type="submit" value="Update Password" id="submit">
             </form>
+        </div>
+        <div id="review">
+        <form method="post" action="../Logics/insertReview.php">
+        
+            <div id="talk">
+                <h1>Dergo nje review</h1>
+            </div>
+            <div class="write">
+                <input class="input1" type="text" name="name" placeholder="Emri">
+            </div>
+           
+            <div class="write">
+                <textarea id="form-message" class="input1" name="review" placeholder="Mesazhi"></textarea>
+            </div>
+            <button id="submit" type="submit" name="review-submit">D&#235rgo Review</button>
+        
+
+    </form>
         </div>
     </div>
     <footer>
