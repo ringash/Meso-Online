@@ -29,7 +29,11 @@ session_start();
             ?>
                 <a href="../settings.php">SETTINGS</a>
             <?php }
-            ?>
+            ?><?php if (isset($_SESSION["role"]) && $_SESSION["role"] == '0') {
+                ?>
+                    <a href="../profile.php">PROFILE</a>
+                <?php }
+                ?>
         </div>
         <div id="login-register">
             <?php if (!isset($_SESSION["role"])) {
