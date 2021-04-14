@@ -6,8 +6,9 @@ if (isset($_POST['addCourse-btn'])) {
     $pdf = file_get_contents($_FILES['pdf']['tmp_name']);
     $pdfType = $_FILES['pdf']['type'];
     $pdfName = $_FILES['pdf']['name'];
+    $creator = $_SESSION['username'];
 
     $mapper = new userData();
-    $mapper->insertCourse($name, $img, $pdf, $pdfType, $pdfName);
+    $mapper->insertCourse($name, $img, $pdf, $pdfType, $pdfName, $creator);
     header("Location:../Views/settings.php");
 }
