@@ -60,7 +60,7 @@ $reviewList = $mapper3->getAllReviews();
                             <tr>
                                 <td><?php echo $course['coursename']; ?></td>
                                 <td><?php echo $course['creator']; ?></td>
-                                <td><a href=<?php echo "edit.php?id=" . $course['id']; ?>>Modifiko</td>
+                                <td><a href=<?php echo "editCourse.php?id=" . $course['id']; ?>>Modifiko</td>
                                 <td><a href=<?php echo "../Logics/deleteCourse.php?id=" . $course['id']; ?>>Fshij</td>
                             </tr>
                         <?php

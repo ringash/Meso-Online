@@ -142,10 +142,17 @@ class userData extends DatabasePDOConfiguration
         $statement->execute();
     }
 
-    public function insertCourse($name, $img, $pdf, $pdfType, $pdfName, $creator)
+    public function insertCourse(\Course $course)
     {
         $this->query = "insert into courses values('',?,?,?,?,?,?)";
         $statement = $this->conn->prepare($this->query);
+        $name = $course->getName();
+        $img = $course->getImg();
+        $pdf = $course->getFile();
+        $pdfType = $course->getFileType();
+        $pdfName = $course->getFileName();
+        $creator = $course->getCreator();
+
         $statement->bindParam(1, $name);
         $statement->bindParam(2, $img);
         $statement->bindParam(3, $pdf);
@@ -268,11 +275,35 @@ class userData extends DatabasePDOConfiguration
         $statement->execute();
     }
 
-    public function getReviewsForIndex(){
+    public function getReviewsForIndex()
+    {
         $this->query = "select * from reviews where active=1";
         $statement = $this->conn->prepare($this->query);
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
+    }
+    public function editCourse(\Course $course, $id)
+    {
+        $this->query = "update courses set coursename=:coursename,
+         courseimg=:courseimg,courseFile=:courseFile ,courseFileType=:courseFileType,
+         courseFileName=:courseFileName, creator=:creator  where id=:id";
+        $statement = $this->conn->prepare($this->query);
+
+        $coursename = $course->getName();
+        $courseimg = $course->getImg();
+        $courseFile = $course->getFile();
+        $courseFileType = $course->getFileType();
+        $courseFileName = $course->getFileName();
+        $creator = $course->getCreator();
+
+        $statement->bindParam(":coursename", $coursename);
+        $statement->bindParam(":courseimg", $courseimg);
+        $statement->bindParam(":courseFile", $courseFile);
+        $statement->bindParam(":courseFileType", $courseFileType);
+        $statement->bindParam(":courseFileName", $courseFileName);
+        $statement->bindParam(":creator", $creator);
+        $statement->bindParam(":id", $id);
+        $statement->execute();
     }
 }
