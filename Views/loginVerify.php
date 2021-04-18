@@ -25,7 +25,12 @@ class Login
         } else if ($this->usernameAndPasswordCorrect($this->username, $this->password)) {
             header("Location:courses.php");
         } else {
-            header("Location:index.php");
+?>
+            <script>
+                alert("Nuk keni shkruar mire username ose password");
+                window.location.href = "../Views/login.php";
+            </script>
+<?php
         }
     }
 
@@ -44,16 +49,16 @@ class Login
         if ($user == null || count($user) == 0) return false;
         else if (password_verify($password, $user['pass'])) {
             if ($user['role'] == 1) {
-                $obj = new AdminUser($user['username'],$user['email'], $user['pass'], $user['role']);
+                $obj = new AdminUser($user['username'], $user['email'], $user['pass'], $user['role']);
                 $obj->setSession();
             } else {
-                $obj = new SimpleUser($user['username'],$user['email'], $user['pass'], $user['role']);
+                $obj = new SimpleUser($user['username'], $user['email'], $user['pass'], $user['role']);
                 $obj->setSession();
             }
             return true;
-        } else{
+        } else {
             return false;
-        } 
+        }
     }
 }
 ?>
