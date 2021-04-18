@@ -100,7 +100,7 @@ body {
 }
 
 .table {
-    width: 50%;
+    /* width: 50%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,4 +142,126 @@ main {
     width: 50%;
     display: flex;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 400px) {
+    .boxWithAddOpt {
+        width: 100%;
+    }
+    #leftList ul {
+        flex-direction: row;
+        padding: 30px;
+    }
+    #leftlist {
+        width: 100%;
+        height: 80px;
+    }
+    #leftList li {
+        padding: 0px;
+    }
+    #leftList a {
+        font-size: 13px;
+    }
+    #leftList a:hover {
+        font-size: 15px;
+    }
+    .table {
+        margin-left: 0px;
+    }
+    table {
+        width: 50%;
+    }
+    h2 {
+        padding-top: 150px;
+    }
+    .addForms {
+        position: absolute;
+        margin-top: 300px;
+    }
+    #settingsFooter {
+        margin-top: 200px;
+    }
+    td {
+        padding: 8px;
+    }
+    #userlist table {
+        font-size: 9px;
+    }
+    #contactList table {
+        font-size: 12px;
+    }
+    #reviewList table {
+        font-size: 10px;
+    }
+    #reviewList h2 {
+        padding-top: 100px;
+        padding-bottom: 10px;
+    }
+    #reviewList {
+        height: 100%;
+    }
+    #staffList table {
+        margin-left: 30px;
+    }
+    #staffList form {
+        margin-top: 400px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .boxWithAddOpt {
+        width: 100%;
+    }
+    #leftList ul {
+        flex-direction: row;
+        padding: 30px;
+    }
+    #leftlist {
+        width: 100%;
+        height: 80px;
+    }
+    #leftList li {
+        padding: 0px;
+    }
+    #leftList a {
+        font-size: 13px;
+    }
+    #leftList a:hover {
+        font-size: 15px;
+    }
+    .table {
+        margin-left: 40px;
+    }
+    table {
+        width: 90%;
+    }
+    h2 {
+        padding-top: 150px;
+    }
+    .addForms {
+        position: absolute;
+        margin-top: 450px;
+    }
+    td {
+        padding: 15px;
+    }
+    #userlist table {
+        font-size: 15px;
+    }
+    #contactList table {
+        font-size: 16px;
+    }
+    #reviewList table {
+        font-size: 15px;
+    }
+    #reviewList h2 {
+        padding-top: 100px;
+        padding-bottom: 10px;
+    }
+    #staffList table {
+        margin-left: 30px;
+    }
+    #staffList form {
+        margin-top: 300px;
+    }
 }

@@ -112,7 +112,7 @@ form {
     padding: 10px;
 }
 
-img {
+#showPic img {
     height: 150px;
     border-radius: 50%;
     border: 1px solid rgb(27, 188, 154);
@@ -142,4 +142,68 @@ input[type="file"] {
 
 #talk {
     margin-top: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+    div#myprofile {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding-top: 30px;
+        flex-direction: column;
+    }
+    #myprofile {
+        height: 100%;
+    }
+    .write {
+        width: inherit;
+    }
+    input.input1 {
+        width: 40%;
+    }
+    #review {
+        margin: 40px;
+    }
+    #profilePic {
+        margin: 40px;
+        width: 280px
+    }
+    div#changePass {
+        margin: 40px;
+        width: 280px;
+        padding: 10px;
+    }
+    td {
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    div#myprofile {
+        flex-wrap: wrap;
+    }
+    #myprofile {
+        height: 100%;
+    }
+    .write {
+        width: inherit;
+    }
+    input.input1 {
+        width: 40%;
+    }
+    #review {
+        margin: 40px;
+    }
+    #profilePic {
+        margin: 40px;
+        width: 280px
+    }
+    div#changePass {
+        margin: 40px;
+        width: 280px;
+        padding: 10px;
+    }
+    td {
+        padding-left: 40px;
+    }
 }

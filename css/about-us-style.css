@@ -145,12 +145,14 @@ h2 {
     }
     .slider-content img {
         margin: auto;
-        width: 500px;
+        width: 80%;
         padding: 10px;
+        height: 20%;
     }
     #about-intro {
         padding: 37px;
         margin-bottom: 70px;
+        margin-top: 150px;
     }
     .p1 {
         font-size: 17px;

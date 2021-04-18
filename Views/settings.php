@@ -121,7 +121,7 @@ $reviewList = $mapper3->getAllReviews();
 
 
         <!-- KONTAKTET -->
-        <div class="table hidden">
+        <div class="table hidden" id="contactList">
             <h2>Kontaktet:</h2>
             <table>
                 <thead>
@@ -152,7 +152,7 @@ $reviewList = $mapper3->getAllReviews();
 
 
         <!-- REVIEWS -->
-        <div class="table hidden">
+        <div class="table hidden" id="reviewList">
             <h2>Reviews:</h2>
             <table>
                 <thead>
@@ -192,7 +192,7 @@ $reviewList = $mapper3->getAllReviews();
 
 
         <!-- STAFI -->
-        <div class="table hidden">
+        <div class="table hidden" id="staffList">
             <h2>Stafi:</h2>
             <div class="boxWithAddOpt">
                 <table>
@@ -236,7 +236,7 @@ $reviewList = $mapper3->getAllReviews();
         </div>
     </main>
     <script src="../js/settingsDivs.js"></script>
-    <footer>
+    <footer id="settingsFooter">
         <?php include 'footer.php'; ?>
     </footer>
 </body>
