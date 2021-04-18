@@ -306,4 +306,15 @@ class userData extends DatabasePDOConfiguration
         $statement->bindParam(":id", $id);
         $statement->execute();
     }
+    public function insertPic($profilePic, $id)
+    {
+        $this->query = "update usersinfo set profilePic=:profilePic where id=:id";
+        $statement = $this->conn->prepare($this->query);
+
+        $statement->bindParam(":profilePic", $profilePic);
+
+        $statement->bindParam(":id", $id);
+
+        $statement->execute();
+    }
 }
